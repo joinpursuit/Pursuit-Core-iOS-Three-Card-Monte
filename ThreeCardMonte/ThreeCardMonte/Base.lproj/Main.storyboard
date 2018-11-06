@@ -68,7 +68,6 @@
                     <connections>
                         <outlet property="displayLabel" destination="ACc-Yf-CaZ" id="ekh-hz-65F"/>
                         <outlet property="firstCard" destination="KFa-lB-HaY" id="r4u-xG-fw2"/>
-                        <outlet property="newGame" destination="jXr-RI-YRo" id="mA2-Cd-6h0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

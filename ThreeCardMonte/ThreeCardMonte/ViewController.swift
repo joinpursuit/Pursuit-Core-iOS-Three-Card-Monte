@@ -16,17 +16,16 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
   }
-
     @IBAction func cardToBePicked(_ sender: UIButton) {
 //        _ = Int.random(in: 0...2)
         
         switch sender.tag {
         case 0:
             sender.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-            displayLabel.text = "Wrong Card"
+            displayLabel.text = "Wrong"
         case 1:
             sender.setImage(UIImage.init(named: "threeCard"), for: .normal)
-            displayLabel.text = "Wrong Card"
+            displayLabel.text = "Wrong"
         case 2:
             sender.setImage(UIImage.init(named: "kingCard"), for: .normal)
             displayLabel.text = "Correct!"
