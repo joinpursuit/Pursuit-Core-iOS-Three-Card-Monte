@@ -32,11 +32,12 @@ class ViewController: UIViewController {
 
         var winCount = 0
         var lossCount = 0
+    
+    var arrayImage: [UIImage] = [UIImage(named: "threeCard")!, UIImage(named: "threeCard")!, UIImage(named: "kingCard")!].shuffled()
+    
 
     @IBAction func cardFlip(_ sender: UIButton) {
        
-        var arrayImage: [UIImage] = [UIImage(named: "threeCard")!, UIImage(named: "threeCard")!, UIImage(named: "kingCard")!].shuffled()
-    
         switch sender.tag {
         case 0:
             sender.setImage(arrayImage[0], for: .normal)
@@ -49,6 +50,12 @@ class ViewController: UIViewController {
             } else {
                 lossCount += 1
                 message.text = "You lose. Play Again?"
+                if arrayImage[1] == UIImage(named: "kingCard") {
+                    card2.setImage(UIImage(named: "kingCard"), for: .normal)
+                }
+                if arrayImage[2] == UIImage(named: "kingCard") {
+                    card3.setImage(UIImage(named: "kingCard"), for: .normal)
+                }
             }
         case 1:
             sender.setImage(arrayImage[1], for: .normal)
@@ -61,6 +68,12 @@ class ViewController: UIViewController {
             } else {
                 lossCount += 1
                 message.text = "You lose. Play Again?"
+                if arrayImage[0] == UIImage(named: "kingCard") {
+                    card1.setImage(UIImage(named: "kingCard"), for: .normal)
+                }
+                if arrayImage[2] == UIImage(named: "kingCard") {
+                    card3.setImage(UIImage(named: "kingCard"), for: .normal)
+                }
             }
         case 2:
             sender.setImage(arrayImage[2], for: .normal)
@@ -73,6 +86,12 @@ class ViewController: UIViewController {
             } else {
                 lossCount += 1
                 message.text = "You lose. Play Again?"
+                if arrayImage[0] == UIImage(named: "kingCard") {
+                    card1.setImage(UIImage(named: "kingCard"), for: .normal)
+                }
+                if arrayImage[1] == UIImage(named: "kingCard") {
+                    card2.setImage(UIImage(named: "kingCard"), for: .normal)
+                }
             }
         default:
             print("invalid")
@@ -83,17 +102,19 @@ class ViewController: UIViewController {
     }
     
     
-//    @IBAction func newGame(_ sender: UIButton) {
-//        card1.isEnabled = true
-//        card2.isEnabled = true
-//        card3.isEnabled = true
+    @IBAction func newGame(_ sender: UIButton) {
+        card1.isEnabled = true
+        card2.isEnabled = true
+        card3.isEnabled = true
 
         
-//        card1.setImage(UIImage(named: "cardBackRed"), for: .normal)
-//        card2.setImage(UIImage(named: "cardBackRed"), for: .normal)
-//        card3.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        card1.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        card2.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        card3.setImage(UIImage(named: "cardBackRed"), for: .normal)
 
-//    }
+        message.text = "Pick a card."
+        arrayImage = arrayImage.shuffled()
+    }
 }
 
 
