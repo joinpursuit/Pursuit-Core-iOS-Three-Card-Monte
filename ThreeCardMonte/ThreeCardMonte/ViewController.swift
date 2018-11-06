@@ -21,7 +21,23 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
   }
-
+    func cardReveal(a: Int, b: Int) {
+        //let myCard = ["kingCard", "cardBackRed", "threeCard"]
+        if a == 0 {
+            firstCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
+        } else if a == 1 {
+            secondCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
+        } else if a == 2 {
+            thirdCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
+        }
+        if b == 0 {
+            firstCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
+        } else if b == 1 {
+            secondCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
+        } else if b == 2 {
+            thirdCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
+        }
+    }
     @IBAction func cardSelect (_ sender: UIButton) {
 //        var cardReveal: (pickCard: UIImage?, choice: String)?
         let randArray: [Int] = [0,1,2]
@@ -30,13 +46,11 @@ class ViewController: UIViewController {
             case 0:
                 if sender.tag == randomEle {
                     firstCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    secondCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-                    thirdCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
                     messageLabel.text = "You found the king!"
                 } else {
-                    firstCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-                    secondCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    thirdCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+                    if let randomInt = randomEle {
+                        cardReveal(a: randomInt, b: sender.tag)
+                    }
                     messageLabel.text = "Wrong card!"
                 }
                 firstCard.isEnabled = false
@@ -44,14 +58,12 @@ class ViewController: UIViewController {
                 thirdCard.isEnabled = false
             case 1:
                 if sender.tag == randomEle {
-                    firstCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
                     secondCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    thirdCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
                     messageLabel.text = "You found the king!"
                 } else {
-                    firstCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    secondCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-                    thirdCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+                    if let randomInt = randomEle {
+                        cardReveal(a: randomInt, b: sender.tag)
+                    }
                     messageLabel.text = "Wrong card!"
                 }
                 firstCard.isEnabled = false
@@ -59,14 +71,15 @@ class ViewController: UIViewController {
                 thirdCard.isEnabled = false
             case 2:
                 if sender.tag == randomEle {
-                    firstCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-                    secondCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
                     thirdCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
                     messageLabel.text = "You found the king!"
                 } else {
-                    firstCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    secondCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-                    thirdCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                    if let randomInt = randomEle {
+                        cardReveal(a: randomInt, b: sender.tag)
+                    }
+//                    firstCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
+//                    secondCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+//                    thirdCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
                     messageLabel.text = "Wrong card!"
                 }
                 firstCard.isEnabled = false
