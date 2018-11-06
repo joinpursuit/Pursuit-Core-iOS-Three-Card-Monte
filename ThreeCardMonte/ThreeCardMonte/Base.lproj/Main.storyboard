@@ -17,14 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgh-A8-SWm">
-                                <rect key="frame" x="34" y="205" width="78" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="cardBackRed"/>
-                                <connections>
-                                    <action selector="cardToBePicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OTM-iq-7b3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQw-EN-jZm">
                                 <rect key="frame" x="148" y="205" width="80" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,7 +46,7 @@
                                 <state key="normal" title="New Game"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFa-lB-HaY">
-                                <rect key="frame" x="34" y="205" width="78" height="114"/>
+                                <rect key="frame" x="33" y="205" width="78" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="cardBackRed"/>
                                 <connections>
@@ -67,7 +59,9 @@
                     </view>
                     <connections>
                         <outlet property="displayLabel" destination="ACc-Yf-CaZ" id="ekh-hz-65F"/>
-                        <outlet property="firstCard" destination="KFa-lB-HaY" id="r4u-xG-fw2"/>
+                        <outlet property="firstCard" destination="KFa-lB-HaY" id="oMa-EM-Khb"/>
+                        <outlet property="secondCard" destination="AQw-EN-jZm" id="xQH-LB-jsl"/>
+                        <outlet property="thirdCard" destination="pIS-da-QUO" id="1Bs-ZX-66G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
