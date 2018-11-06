@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ThreeCardMonte
 //
-//  Created by Alex Paul on 11/5/18.
+//  Created by Jane Zhu on 11/5/18.
 //  Copyright © 2018 Pursuit. All rights reserved.
 //
 
@@ -10,11 +10,90 @@ import UIKit
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
+  
+    @IBOutlet weak var message: UILabel!
+    
+    @IBOutlet weak var card1: UIButton!
+    
+    @IBOutlet weak var card2: UIButton!
+    
+    @IBOutlet weak var card3: UIButton!
+    
+    @IBOutlet weak var winNum: UILabel!
+
+    @IBOutlet weak var lossNum: UILabel!
+    
+    @IBOutlet weak var newGame: UIButton!
+    
+    override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
   }
 
+        var winCount = 0
+        var lossCount = 0
 
+    @IBAction func cardFlip(_ sender: UIButton) {
+       
+        var arrayImage: [UIImage] = [UIImage(named: "threeCard")!, UIImage(named: "threeCard")!, UIImage(named: "kingCard")!].shuffled()
+    
+        switch sender.tag {
+        case 0:
+            sender.setImage(arrayImage[0], for: .normal)
+            card1.isEnabled = false
+            card2.isEnabled = false
+            card3.isEnabled = false
+            if arrayImage[0] == UIImage(named: "kingCard") {
+                winCount += 1
+                message.text = "You win. Play Again?"
+            } else {
+                lossCount += 1
+                message.text = "You lose. Play Again?"
+            }
+        case 1:
+            sender.setImage(arrayImage[1], for: .normal)
+            card1.isEnabled = false
+            card2.isEnabled = false
+            card3.isEnabled = false
+            if arrayImage[1] == UIImage(named: "kingCard") {
+                winCount += 1
+                message.text = "You win. Play Again?"
+            } else {
+                lossCount += 1
+                message.text = "You lose. Play Again?"
+            }
+        case 2:
+            sender.setImage(arrayImage[2], for: .normal)
+            card1.isEnabled = false
+            card2.isEnabled = false
+            card3.isEnabled = false
+            if arrayImage[2] == UIImage(named: "kingCard") {
+                winCount += 1
+                message.text = "You win. Play Again?"
+            } else {
+                lossCount += 1
+                message.text = "You lose. Play Again?"
+            }
+        default:
+            print("invalid")
+        }
+        
+        winNum.text = "\(winCount)"
+        lossNum.text = "\(lossCount)"
+    }
+    
+    
+//    @IBAction func newGame(_ sender: UIButton) {
+//        card1.isEnabled = true
+//        card2.isEnabled = true
+//        card3.isEnabled = true
+
+        
+//        card1.setImage(UIImage(named: "cardBackRed"), for: .normal)
+//        card2.setImage(UIImage(named: "cardBackRed"), for: .normal)
+//        card3.setImage(UIImage(named: "cardBackRed"), for: .normal)
+
+//    }
 }
+
 
