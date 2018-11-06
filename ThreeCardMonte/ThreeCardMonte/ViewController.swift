@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var leftCard: UIButton!
     @IBOutlet weak var middleCard: UIButton!
     @IBOutlet weak var rightCard: UIButton!
+    @IBOutlet weak var fourthCard: UIButton!
+    @IBOutlet weak var fifthCard: UIButton!
     @IBOutlet weak var Display: UILabel!
     @IBOutlet weak var score: UILabel!
     var winCounter = 0
@@ -23,6 +25,31 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
   }
+    func enableCards() {
+        leftCard.isEnabled = true
+        middleCard.isEnabled = true
+        rightCard.isEnabled = true
+        if !fourthCard.isHidden {
+            fourthCard.isEnabled = true
+        }
+        if !fifthCard.isHidden {
+            fifthCard.isEnabled = true
+        }
+    }
+    func flipCardsBack() {
+        leftCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        middleCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        rightCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        if !fourthCard.isHidden {
+            fourthCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        }
+        if !fifthCard.isHidden {
+            fifthCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        }
+    }
+    func originalDisplay() {
+        Display.text = "Pick a Card! Any Card!"
+    }
 
     @IBAction func cardWillFlip(_ sender: UIButton) {
         
@@ -30,6 +57,12 @@ class ViewController: UIViewController {
             leftCard.isEnabled = false
             middleCard.isEnabled = false
             rightCard.isEnabled = false
+            if !fourthCard.isHidden {
+                fourthCard.isEnabled = false
+            }
+            if !fifthCard.isHidden {
+                fifthCard.isEnabled = false
+            }
         }
         func loseFlipKing(king: Int) {
             switch king {
@@ -39,6 +72,10 @@ class ViewController: UIViewController {
             middleCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
             case 2:
             rightCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
+            case 3:
+                fourthCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
+            case 4:
+                fifthCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
             default:
             print("Error")
             }
@@ -50,6 +87,12 @@ class ViewController: UIViewController {
                 loseCounter += 1
             }
             score.text = "Won: \(winCounter) Lost: \(loseCounter)"
+        }
+        if !fourthCard.isHidden {
+            randomCard.append(3)
+        }
+        if !fifthCard.isHidden {
+            randomCard.append(4)
         }
         if let kingLocation = randomCard.randomElement() {
             switch sender.tag {
@@ -93,26 +136,54 @@ class ViewController: UIViewController {
                     disableCards()
                     winLose(kingLocation: kingLocation, tag: sender.tag)
                 }
+            case 3:
+                if kingLocation == sender.tag {
+                    fourthCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
+                    Display.text = "You Win!"
+                    disableCards()
+                    winLose(kingLocation: kingLocation, tag: sender.tag)
+                } else {
+                    fourthCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                    Display.text = "You Lose!"
+                    loseFlipKing(king: kingLocation)
+                    disableCards()
+                    winLose(kingLocation: kingLocation, tag: sender.tag)
+                }
+            case 4:
+                if kingLocation == sender.tag {
+                    fifthCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
+                    Display.text = "You Win!"
+                    disableCards()
+                    winLose(kingLocation: kingLocation, tag: sender.tag)
+                } else {
+                    fifthCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                    Display.text = "You Lose!"
+                    loseFlipKing(king: kingLocation)
+                    disableCards()
+                    winLose(kingLocation: kingLocation, tag: sender.tag)
+                }
             default:
                 print("Error")
             }
         }
     }
-    @IBAction func newGame(_ sender: UIButton) {
-        func enableCards() {
-            leftCard.isEnabled = true
-            middleCard.isEnabled = true
-            rightCard.isEnabled = true
-        }
-        func flipCardsBack() {
-            leftCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-            middleCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-            rightCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-        }
-        func originalDisplay() {
-            Display.text = "Pick a Card! Any Card!"
-        }
-        
+    @IBAction func new3Game(_ sender: UIButton) {
+        fourthCard.isHidden = true
+        fifthCard.isHidden = true
+        enableCards()
+        flipCardsBack()
+        originalDisplay()
+    }
+    @IBAction func new4Game(_ sender: UIButton) {
+        fourthCard.isHidden = false
+        fifthCard.isHidden = true
+        enableCards()
+        flipCardsBack()
+        originalDisplay()
+    }
+    @IBAction func new5Game(_ sender: UIButton) {
+        fourthCard.isHidden = false
+        fifthCard.isHidden = false
         enableCards()
         flipCardsBack()
         originalDisplay()
