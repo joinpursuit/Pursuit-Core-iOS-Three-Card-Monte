@@ -16,9 +16,6 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    @IBAction func newGame(_ sender: UIButton) {
-        
-    }
     
 //    var tagArray = [0,1,2]
 //    var randomTag = tagArray.randomElement()
@@ -37,10 +34,19 @@ class ViewController: UIViewController {
     
   }
 
+    
+    @IBAction func newGame(_ sender: Any) {
+        card0.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        card0.isEnabled = true
+        card1.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        card1.isEnabled = true
+        card2.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        card2.isEnabled = true
+
+    }
+    
     @IBOutlet weak var winLoseMessage: UILabel!
     
-    
-
     @IBAction func cards(_ sender: UIButton) {
         
         switch sender.tag {
