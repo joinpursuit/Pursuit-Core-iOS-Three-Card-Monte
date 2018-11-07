@@ -63,19 +63,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @IBAction func cardToBePicked(_ sender: UIButton) {
-
         let randomCard = Int.random(in: 0...2)
 //        print(randomCard)
 //        let cardImg: [UIImage] = [UIImage.init(named: "threeCard")!, UIImage.init(named: "cardBackRed")!, UIImage.init(named: "cardBackRed")!, UIImage.init(named: "cardBackRed")!]
