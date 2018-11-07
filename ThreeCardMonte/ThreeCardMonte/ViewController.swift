@@ -96,6 +96,20 @@ class ViewController: UIViewController {
             }
             score.text = "Won: \(winCounter) Lost: \(loseCounter)"
         }
+        func isWinner(kingLocation: Int, tag: Int, card: UIButton) {
+            if kingLocation == tag {
+                card.setImage(UIImage.init(named: "kingCard"), for: .normal)
+                Display.text = "You Win!"
+                disableCards()
+                winLose(kingLocation: kingLocation, tag: sender.tag)
+            } else {
+                card.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                Display.text = "You Lose!"
+                loseFlipKing(king: kingLocation)
+                disableCards()
+                winLose(kingLocation: kingLocation, tag: sender.tag)
+            }
+        }
         if !fourthCard.isHidden {
             randomCard.append(3)
         }
@@ -105,71 +119,15 @@ class ViewController: UIViewController {
         if let kingLocation = randomCard.randomElement() {
             switch sender.tag {
             case 0:
-                if kingLocation == sender.tag {
-                    leftCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    Display.text = "You Win!"
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                } else {
-                    leftCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-                    Display.text = "You Lose!"
-                    loseFlipKing(king: kingLocation)
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                }
-                
+                isWinner(kingLocation: kingLocation, tag: sender.tag, card: leftCard)
             case 1:
-                if kingLocation == sender.tag {
-                    middleCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    Display.text = "You Win!"
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                } else {
-                    middleCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-                    Display.text = "You Lose!"
-                    loseFlipKing(king: kingLocation)
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                }
+                isWinner(kingLocation: kingLocation, tag: sender.tag, card: middleCard)
             case 2:
-                if kingLocation == sender.tag {
-                    rightCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    Display.text = "You Win!"
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                } else {
-                    rightCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-                    Display.text = "You Lose!"
-                    loseFlipKing(king: kingLocation)
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                }
+                isWinner(kingLocation: kingLocation, tag: sender.tag, card: rightCard)
             case 3:
-                if kingLocation == sender.tag {
-                    fourthCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    Display.text = "You Win!"
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                } else {
-                    fourthCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-                    Display.text = "You Lose!"
-                    loseFlipKing(king: kingLocation)
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                }
+                isWinner(kingLocation: kingLocation, tag: sender.tag, card: fourthCard)
             case 4:
-                if kingLocation == sender.tag {
-                    fifthCard.setImage(UIImage.init(named: "kingCard"), for: .normal)
-                    Display.text = "You Win!"
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                } else {
-                    fifthCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-                    Display.text = "You Lose!"
-                    loseFlipKing(king: kingLocation)
-                    disableCards()
-                    winLose(kingLocation: kingLocation, tag: sender.tag)
-                }
+                isWinner(kingLocation: kingLocation, tag: sender.tag, card: fifthCard)
             default:
                 print("Error")
             }
