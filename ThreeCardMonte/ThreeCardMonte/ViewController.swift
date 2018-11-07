@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     //outlets:
     //"pick a card"
     @IBOutlet weak var label1: UILabel!
+    //find the king
+    @IBOutlet weak var label2: UILabel!
     
     
     //Points:
@@ -38,8 +40,10 @@ class ViewController: UIViewController {
     func changeLabel(didWin: Int){
         if didWin == 0 { //0 = win
             label1.text = "You Win!"
+            label2.text = ""
         }else { // 1 = loose
             label1.text = "You Loose..😵"
+            label2.text = ""
         }
         toggle()
         
@@ -132,7 +136,7 @@ class ViewController: UIViewController {
             } else {
                 
                 setThree(card: card3)
-                card3.isEnabled = false
+                notEnabled(card: card3)
                 setKing(card: card1)
                 changeLabel(didWin: 1)
             }
@@ -158,7 +162,7 @@ class ViewController: UIViewController {
             } else {
                 
                 setThree(card: card5)
-                card3.isEnabled = false
+                notEnabled(card: card3)
                 setKing(card: card2)
                 changeLabel(didWin: 1)
             }
@@ -166,11 +170,27 @@ class ViewController: UIViewController {
             
         default:
             card1.setImage(UIImage.init(named: "threeCard"), for: .normal)
-            card1.isEnabled = false
+            notEnabled(card: card1)
             
             
         }
         
+    }
+    
+    
+    @IBAction func threeButtonMonte(_ sender: UIButton) {
+        card4.isHidden = true
+        card5.isHidden = true
+    }
+    @IBAction func fourCardMonte(_ sender: UIButton) {
+        card4.isHidden = false
+        card5.isHidden = true
+    }
+    
+    
+    @IBAction func fiveCardMonte(_ sender: UIButton) {
+        card5.isHidden = false
+        card4.isHidden = false
     }
     
 
@@ -190,6 +210,7 @@ class ViewController: UIViewController {
         faceDown(card: card5)
         isEnabled(card: card5)
         //welcome
+        label2.text = "Find The King 👑"
         label1.text = "Pick a Card.. Any Card 🎩🐇"
     }
     

@@ -82,6 +82,36 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFj-Sk-JxA">
+                                        <rect key="frame" x="258" y="90" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="3-Card Monte">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="threeButtonMonte:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1OD-mA-UEv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kd-il-ouM">
+                                        <rect key="frame" x="258" y="141" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="4-Card Monte">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fourCardMonte:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sTx-nL-dKa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63e-D5-Y1I">
+                                        <rect key="frame" x="258" y="192" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="5-Card Monte">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fiveCardMonte:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syr-PK-eJu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.90220165296511912" blue="0.94813543241796883" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -104,6 +134,7 @@
                         <outlet property="card4" destination="6rm-VL-AES" id="Z9l-O4-zxe"/>
                         <outlet property="card5" destination="vjL-cv-uQA" id="WZU-cr-Uw8"/>
                         <outlet property="label1" destination="iWo-de-L7l" id="5ET-8z-kOA"/>
+                        <outlet property="label2" destination="Nml-km-jz9" id="L3K-hy-7v0"/>
                         <outlet property="points" destination="7dQ-nd-DmY" id="Lnw-lE-MD4"/>
                     </connections>
                 </viewController>
