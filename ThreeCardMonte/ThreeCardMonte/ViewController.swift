@@ -76,21 +76,24 @@ class ViewController: UIViewController {
         fifthCard.isEnabled = false
     }
     func setHide() {
-        firstCard.setImage(UIImage.init(named: ""), for: .normal)
-        secondCard.setImage(UIImage.init(named: ""), for: .normal)
-        thirdCard.setImage(UIImage.init(named: ""), for: .normal)
-        fourthCard.setImage(UIImage.init(named: ""), for: .normal)
-        fifthCard.setImage(UIImage.init(named: ""), for: .normal)
+        firstCard.isHidden = true
+        secondCard.isHidden =  true
+        thirdCard.isHidden = true
+        fourthCard.isHidden = true
+        fifthCard.isHidden = true
     }
     func newGameCard(a: Int) {
         switch a {
         case 3:
             randArray = [0,1,2]
+            firstCard.isHidden = false
+            secondCard.isHidden = false
+            thirdCard.isHidden = false
             firstCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
             secondCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
             thirdCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-            fourthCard.setImage(UIImage.init(named: ""), for: .normal)
-            fifthCard.setImage(UIImage.init(named: ""), for: .normal)
+            fourthCard.isHidden = true
+            fifthCard.isHidden = true
             randomEle = randArray.randomElement()
             firstCard.isEnabled = true
             secondCard.isEnabled = true
@@ -99,11 +102,15 @@ class ViewController: UIViewController {
             fifthCard.isEnabled = false
         case 4:
             randArray = [0,1,2,3]
+            firstCard.isHidden = false
+            secondCard.isHidden = false
+            thirdCard.isHidden = false
+            fourthCard.isHidden = false
             firstCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
             secondCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
             thirdCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
             fourthCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-            fifthCard.setImage(UIImage.init(named: ""), for: .normal)
+            fifthCard.isHidden = true
             randomEle = randArray.randomElement()
             firstCard.isEnabled = true
             secondCard.isEnabled = true
@@ -112,6 +119,11 @@ class ViewController: UIViewController {
             fifthCard.isEnabled = false
         case 5:
             randArray = [0,1,2,3,4]
+            firstCard.isHidden = false
+            secondCard.isHidden = false
+            thirdCard.isHidden = false
+            fourthCard.isHidden = false
+            fifthCard.isHidden = false
             firstCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
             secondCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
             thirdCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
@@ -209,7 +221,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func newGame3 (_ sender: UIButton) {
-        gameTitle.text = ""
+        gameTitle.isHidden = true
         newGameCard(a: 3)
         messageLabel.text = "Find the king!"
         sender.setTitle("Continue!", for: .normal)
@@ -217,7 +229,7 @@ class ViewController: UIViewController {
         newGame5.setTitle("New Game - 5 Cards", for: .normal)
     }
     @IBAction func newGame4 (_ sender: UIButton) {
-        gameTitle.text = ""
+        gameTitle.isHidden = true
         newGameCard(a: 4)
         messageLabel.text = "Find the king!"
         sender.setTitle("Continue!", for: .normal)
@@ -225,7 +237,7 @@ class ViewController: UIViewController {
         newGame5.setTitle("New Game - 5 Cards", for: .normal)
     }
     @IBAction func newGame5 (_ sender: UIButton) {
-        gameTitle.text = ""
+        gameTitle.isHidden = true
         newGameCard(a: 5)
         messageLabel.text = "Find the king!"
         sender.setTitle("Continue!", for: .normal)
@@ -233,7 +245,7 @@ class ViewController: UIViewController {
         newGame4.setTitle("New Game - 4 Cards", for: .normal)
     }
     @IBAction func resetScore (_ sender: UIButton) {
-        gameTitle.text = "Three Card Monte!!"
+        gameTitle.isHidden = false
         wrongGuess = 0
         wrongLabel.text = String(wrongGuess)
         correctGuess = 0
