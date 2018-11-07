@@ -8,27 +8,70 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-//outlets
-    @IBOutlet weak var firstButton: UIButton!
-    @IBOutlet weak var secondButton: UIButton!
-    @IBOutlet weak var thirdButton: UIButton!
-    
-    override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
 
-    @IBAction func flipCards(_ sender: UIButton) {
+class ViewController: UIViewController {
+   
+    @IBOutlet weak var card1: UIButton!
+    @IBOutlet weak var card2: UIButton!
+    @IBOutlet weak var card3: UIButton!
+    
+    @IBAction func flipACrd(_ sender: UIButton) {
+        
+        var logoImage: [UIImage] = [
+            UIImage(named: "kingCard")!,
+            UIImage(named: "threeCard")!,
+            UIImage(named: "threeCard")!
+        ]
+        
+        logoImage = logoImage.shuffled()
+        
+        
+        
+        
         switch sender.tag {
         case 0:
-          firstButton.setImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControl.State#>)
+            if logoImage[0] == UIImage(named: "kingCard")! {
+                card1.setImage(UIImage.init(named: "kingCard"), for: .normal)
+                card1.isEnabled = false
+                //change label to you win
+                //disable
+                //break
+                
+            } else {
+                card1.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                //change label to oyu lost
+                //flip where the king is
+                //disable
+                
+            }
         case 1:
-            
+            if logoImage[1] == UIImage(named: "kingCard")! {
+                card2.setImage(UIImage.init(named: "kingCard"), for: .normal)
+            } else {
+                card2.setImage(UIImage.init(named: "threeCard"), for: .normal)
+            }
         case 2:
-            
+            if logoImage[2] == UIImage(named: "kingCard")! {
+                card3.setImage(UIImage.init(named: "kingCard"), for: .normal)
+            } else {
+                card3.setImage(UIImage.init(named: "threeCard"), for: .normal)
+            }
         default:
+            print("INVALID TAG")
         }
+        
+        
     }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
+    
 }
+
+
 
