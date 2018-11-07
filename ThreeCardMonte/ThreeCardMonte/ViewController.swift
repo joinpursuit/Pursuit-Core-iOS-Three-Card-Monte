@@ -69,9 +69,24 @@ class ViewController: UIViewController {
         card2.isEnabled = false
         card3.isEnabled = false
         
+    
+    
+    for cards in 0..<logoImage.count {
+    if logoImage[cards] == UIImage(named: "kingCard") {
+    if cards == 0 {
+    card1.setImage(UIImage.init(named: "kingCard"), for: .normal)
+    }
+    if cards == 1 {
+    card2.setImage(UIImage.init(named: "kingCard"), for: .normal)
+    }
+    if cards == 2 {
+    card3.setImage(UIImage.init(named: "kingCard"), for: .normal)
+    }
     }
     
+    }
     
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,7 +105,10 @@ class ViewController: UIViewController {
         card1.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
          card2.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
          card3.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        
     }
+    
+
 }
 
 
