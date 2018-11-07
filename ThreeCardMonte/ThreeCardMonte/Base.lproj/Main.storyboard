@@ -101,15 +101,21 @@
                                     <action selector="resetFiveCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SRO-Gd-uOR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVY-T6-Z4J">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVY-T6-Z4J">
                                 <rect key="frame" x="228" y="377" width="108" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="flipCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8iU-va-7n1"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H4-tJ-Hf3">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H4-tJ-Hf3">
                                 <rect key="frame" x="41" y="377" width="108" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="cardBackRed"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="flipCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcy-qG-Rnl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

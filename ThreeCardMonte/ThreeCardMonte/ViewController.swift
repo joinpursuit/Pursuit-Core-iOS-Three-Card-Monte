@@ -8,10 +8,12 @@
 
 import UIKit
 
+var randomArr = [0,1,2]
+var randomElement = randomArr.randomElement()
+
 var correct = 0
 var incorrect = 0
-var playFourCards = false
-var playFiveCards = false
+
 
 class ViewController: UIViewController {
     // Label Outputs
@@ -37,21 +39,30 @@ class ViewController: UIViewController {
     timesWonLabel.text = "Times Won: \(correct)"
     timesLostLabel.text = "Times Lost: \(incorrect)"
     
+    cardFour.isHidden = true
+    cardFive.isHidden = true
+    cardFour.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+    cardFive.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+    
     // Disable
     cardOne.isEnabled = true
     cardTwo.isEnabled = true
     cardThree.isEnabled = true
-    cardFour.isEnabled = false
-    cardFive.isEnabled = false
+    cardFour.isEnabled = true
+    cardFive.isEnabled = true
     
   }
-    func kingCardForThreeCards (a:Int, b:Int) {
+    func kingCardForCards (a:Int, b:Int) {
         if a == 0 {
             cardOne.setImage(UIImage.init(named: "kingCard" ), for: .normal)
         } else if a == 1 {
             cardTwo.setImage(UIImage.init(named: "kingCard" ), for: .normal)
-        } else if a == 2{
+        } else if a == 2 {
             cardThree.setImage(UIImage.init(named: "kingCard" ), for: .normal)
+        } else if a == 3 {
+            cardFour.setImage(UIImage.init(named: "kingCard" ), for: .normal)
+        } else if a == 4 {
+            cardFive.setImage(UIImage.init(named: "kingCard" ), for: .normal)
         }
         if b == 0 {
             cardOne.setImage(UIImage.init(named: "threeCard" ), for: .normal)
@@ -59,14 +70,18 @@ class ViewController: UIViewController {
             cardTwo.setImage(UIImage.init(named: "threeCard" ), for: .normal)
         } else if b == 2 {
             cardThree.setImage(UIImage.init(named: "threeCard" ), for: .normal)
+        } else if a == 3 {
+            cardFour.setImage(UIImage.init(named: "threeCard" ), for: .normal)
+        } else if a == 4 {
+            cardFive.setImage(UIImage.init(named: "threeCard" ), for: .normal)
         }
     }
     
     
+    
+    
   // Actions
     @IBAction func flipCards(_ sender: UIButton) {
-        let randomArr = [0,1,2]
-        let randomElement = randomArr.randomElement()
         
         switch sender.tag {
         case 0:
@@ -78,7 +93,7 @@ class ViewController: UIViewController {
                 cardOne.setImage(UIImage.init(named: "threeCard"), for: .normal)
                 displayLabel.text = "You Lose"
                 if let randomNum = randomElement {
-                    kingCardForThreeCards(a: randomNum, b: sender.tag)
+                    kingCardForCards(a: randomNum, b: sender.tag)
                 }
                 incorrect += 1
             }
@@ -91,7 +106,7 @@ class ViewController: UIViewController {
                 cardTwo.setImage(UIImage.init(named: "threeCard"), for: .normal)
                 displayLabel.text = "You Lose"
                 if let randomNum = randomElement {
-                    kingCardForThreeCards(a: randomNum, b: sender.tag)
+                    kingCardForCards(a: randomNum, b: sender.tag)
                 }
                 incorrect += 1
             }
@@ -104,7 +119,33 @@ class ViewController: UIViewController {
                 cardThree.setImage(UIImage.init(named: "threeCard"), for: .normal)
                 displayLabel.text = "You Lose"
                 if let randomNum = randomElement {
-                    kingCardForThreeCards(a: randomNum, b: sender.tag)
+                    kingCardForCards(a: randomNum, b: sender.tag)
+                }
+                incorrect += 1
+            }
+        case 3:
+            if sender.tag == randomElement {
+                cardFour.setImage(UIImage.init(named: "kingCard" ), for: .normal)
+                displayLabel.text = "You Win"
+                correct += 1
+            }else {
+                cardFour.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                displayLabel.text = "You Lose"
+                if let randomNum = randomElement {
+                    kingCardForCards(a: randomNum, b: sender.tag)
+                }
+                incorrect += 1
+            }
+        case 4:
+            if sender.tag == randomElement {
+                cardFive.setImage(UIImage.init(named: "kingCard" ), for: .normal)
+                displayLabel.text = "You Win"
+                correct += 1
+            }else {
+                cardFive.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                displayLabel.text = "You Lose"
+                if let randomNum = randomElement {
+                    kingCardForCards(a: randomNum, b: sender.tag)
                 }
                 incorrect += 1
             }
@@ -119,6 +160,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetThreeGame(sender: UIButton) {
+        cardFour.isHidden = true
+        cardFive.isHidden = true
+        
         cardOne.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
         cardTwo.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
         cardThree.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
@@ -131,6 +175,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetFourGame(_ sender: UIButton) {
+        randomArr = [0,1,2,3]
+        randomElement = randomArr.randomElement()
+        
+        cardFour.isHidden = false
+        cardFive.isHidden = true
+        
         cardOne.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
         cardTwo.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
         cardThree.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
@@ -145,6 +195,12 @@ class ViewController: UIViewController {
         }
     
     @IBAction func resetFiveCard(_ sender: UIButton) {
+        randomArr = [0,1,2,3,4]
+        randomElement = randomArr.randomElement()
+        
+        cardFour.isHidden = false
+        cardFive.isHidden = false
+        
         cardOne.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
         cardTwo.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
         cardThree.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
