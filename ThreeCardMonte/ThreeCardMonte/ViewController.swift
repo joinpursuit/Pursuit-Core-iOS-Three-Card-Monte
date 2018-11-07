@@ -36,6 +36,14 @@ class ViewController: UIViewController {
             fifthCard.isEnabled = true
         }
     }
+    func removeHiddenRandom() {
+        if !fifthCard.isHidden {
+            randomCard.remove(at: 4)
+        }
+        if !fourthCard.isHidden {
+            randomCard.remove(at: 3)
+        }
+    }
     func flipCardsBack() {
         leftCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
         middleCard.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
@@ -168,6 +176,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func new3Game(_ sender: UIButton) {
+        removeHiddenRandom()
         fourthCard.isHidden = true
         fifthCard.isHidden = true
         enableCards()
@@ -175,6 +184,7 @@ class ViewController: UIViewController {
         originalDisplay()
     }
     @IBAction func new4Game(_ sender: UIButton) {
+        removeHiddenRandom()
         fourthCard.isHidden = false
         fifthCard.isHidden = true
         enableCards()
