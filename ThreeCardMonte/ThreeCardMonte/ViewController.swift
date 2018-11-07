@@ -10,6 +10,8 @@ import UIKit
 
 var correct = 0
 var incorrect = 0
+var playFourCards = false
+var playFiveCards = false
 
 class ViewController: UIViewController {
     // Label Outputs
@@ -17,11 +19,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var timesWonLabel: UILabel!
     @IBOutlet weak var timesLostLabel: UILabel!
     
-    // Button Outputs
+    // Card Buttons
     @IBOutlet weak var cardOne: UIButton!
     @IBOutlet weak var cardTwo: UIButton!
     @IBOutlet weak var cardThree: UIButton!
+    @IBOutlet weak var cardFour: UIButton!
+    @IBOutlet weak var cardFive: UIButton!
+    
+    // Reset Game Buttons
     @IBOutlet weak var newGame: UIButton!
+    @IBOutlet weak var newFourCard: UIButton!
+    @IBOutlet weak var newFiveCard: UIButton!
     
 
   override func viewDidLoad() {
@@ -33,9 +41,11 @@ class ViewController: UIViewController {
     cardOne.isEnabled = true
     cardTwo.isEnabled = true
     cardThree.isEnabled = true
+    cardFour.isEnabled = false
+    cardFive.isEnabled = false
     
   }
-    func kingCard (a:Int, b:Int) {
+    func kingCardForThreeCards (a:Int, b:Int) {
         if a == 0 {
             cardOne.setImage(UIImage.init(named: "kingCard" ), for: .normal)
         } else if a == 1 {
@@ -68,7 +78,7 @@ class ViewController: UIViewController {
                 cardOne.setImage(UIImage.init(named: "threeCard"), for: .normal)
                 displayLabel.text = "You Lose"
                 if let randomNum = randomElement {
-                    kingCard(a: randomNum, b: sender.tag)
+                    kingCardForThreeCards(a: randomNum, b: sender.tag)
                 }
                 incorrect += 1
             }
@@ -81,7 +91,7 @@ class ViewController: UIViewController {
                 cardTwo.setImage(UIImage.init(named: "threeCard"), for: .normal)
                 displayLabel.text = "You Lose"
                 if let randomNum = randomElement {
-                    kingCard(a: randomNum, b: sender.tag)
+                    kingCardForThreeCards(a: randomNum, b: sender.tag)
                 }
                 incorrect += 1
             }
@@ -94,7 +104,7 @@ class ViewController: UIViewController {
                 cardThree.setImage(UIImage.init(named: "threeCard"), for: .normal)
                 displayLabel.text = "You Lose"
                 if let randomNum = randomElement {
-                    kingCard(a: randomNum, b: sender.tag)
+                    kingCardForThreeCards(a: randomNum, b: sender.tag)
                 }
                 incorrect += 1
             }
@@ -108,7 +118,7 @@ class ViewController: UIViewController {
         timesLostLabel.text = "Times Lost: \(incorrect)"
     }
     
-    @IBAction func resetToOriginalState(sender: UIButton) {
+    @IBAction func resetThreeGame(sender: UIButton) {
         cardOne.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
         cardTwo.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
         cardThree.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
@@ -119,6 +129,37 @@ class ViewController: UIViewController {
         cardTwo.isEnabled = true
         cardThree.isEnabled = true
     }
+    
+    @IBAction func resetFourGame(_ sender: UIButton) {
+        cardOne.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
+        cardTwo.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
+        cardThree.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
+        cardFour.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        
+        displayLabel.text = "Pick a card, any card!"
+        
+        cardOne.isEnabled = true
+        cardTwo.isEnabled = true
+        cardThree.isEnabled = true
+        cardFour.isEnabled = true
+        }
+    
+    @IBAction func resetFiveCard(_ sender: UIButton) {
+        cardOne.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
+        cardTwo.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
+        cardThree.setImage(UIImage.init(named: "cardBackRed" ), for: .normal)
+        cardFour.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        cardFive.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+        
+        displayLabel.text = "Pick a card, any card!"
+        
+        cardOne.isEnabled = true
+        cardTwo.isEnabled = true
+        cardThree.isEnabled = true
+        cardFour.isEnabled = true
+        cardFive.isEnabled = true
+    }
+    
     
     @IBAction func resetScores(_ sender: Any) {
         correct = 0

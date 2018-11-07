@@ -41,12 +41,19 @@
                                     <action selector="flipCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfr-m1-717"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4e-m2-WpU">
-                                <rect key="frame" x="149" y="474" width="77" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card, any card!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpt-Ut-GHY">
+                                <rect key="frame" x="95" y="564" width="184" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Game"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4e-m2-WpU">
+                                <rect key="frame" x="116" y="610" width="143" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New 3 Card Game"/>
                                 <connections>
-                                    <action selector="resetToOriginalStateWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cT7-pV-H6b"/>
+                                    <action selector="resetThreeGameWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FKJ-kk-wsN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Three Card Monte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwE-6E-1IL">
@@ -71,30 +78,53 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyW-x7-Ryh">
-                                <rect key="frame" x="133" y="519" width="108" height="30"/>
+                                <rect key="frame" x="133" y="748" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset Scores"/>
                                 <connections>
                                     <action selector="resetScores:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bi7-OS-tKB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card, any card!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpt-Ut-GHY">
-                                <rect key="frame" x="95" y="409" width="184" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFL-Tw-XGn">
+                                <rect key="frame" x="116" y="655" width="143" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="New 4 Card Game"/>
+                                <connections>
+                                    <action selector="resetFourGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vS-O4-d8j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEr-t8-e7W">
+                                <rect key="frame" x="116" y="693" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New 5 Card Game"/>
+                                <connections>
+                                    <action selector="resetFiveCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SRO-Gd-uOR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVY-T6-Z4J">
+                                <rect key="frame" x="228" y="377" width="108" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H4-tJ-Hf3">
+                                <rect key="frame" x="41" y="377" width="108" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cardBackRed"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cardFive" destination="vVY-T6-Z4J" id="5pw-L4-sBm"/>
+                        <outlet property="cardFour" destination="6H4-tJ-Hf3" id="H2M-yr-PKY"/>
                         <outlet property="cardOne" destination="qrl-Rs-ExJ" id="qKa-vH-GDm"/>
                         <outlet property="cardThree" destination="zKi-cf-rVc" id="iZM-PD-U0h"/>
                         <outlet property="cardTwo" destination="23r-4n-WKu" id="dK7-lU-woU"/>
                         <outlet property="displayLabel" destination="Gpt-Ut-GHY" id="Udx-5d-Av3"/>
-                        <outlet property="newGame" destination="a4e-m2-WpU" id="vpc-rH-qL8"/>
+                        <outlet property="newFiveCard" destination="CEr-t8-e7W" id="zWJ-OD-z5Y"/>
+                        <outlet property="newFourCard" destination="LFL-Tw-XGn" id="h6f-I2-XHJ"/>
+                        <outlet property="newGame" destination="a4e-m2-WpU" id="uJe-RD-U3f"/>
                         <outlet property="timesLostLabel" destination="S45-mw-Fge" id="xbq-mb-AG2"/>
                         <outlet property="timesWonLabel" destination="7sj-LD-BRN" id="bcK-AR-diX"/>
                     </connections>
