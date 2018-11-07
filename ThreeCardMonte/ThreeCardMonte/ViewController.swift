@@ -64,8 +64,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cardToBePicked(_ sender: UIButton) {
-        let randomCard = Int.random(in: 0...2)
+        let randomCard = Int.random(in: 0...4)
         let cardImg1: [UIImage] = [UIImage.init(named: "kingCard")!, UIImage.init(named: "cardBackRed")!,UIImage.init(named: "cardBackRed")!,UIImage.init(named: "cardBackRed")!]
+        let cardImg2:[UIImage] = [UIImage.init(named: "kingCard")!, UIImage.init(named: "cardBackRed")!, UIImage.init(named: "cardBackRed")!]
+        let randomImg2 = cardImg2.shuffled()
         let randomImg1 = cardImg1.shuffled()
         switch sender.tag {
         case 0:
@@ -81,13 +83,11 @@ class ViewController: UIViewController {
                 correctButton.text = "Correct: \(correct)"
                 
             } else {
-//            sender.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
+
             displayLabel.text = "Wrong"
             firstCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-            secondCard.setImage(randomImg1[0], for: .normal)
-            thirdCard.setImage(randomImg1[1], for: .normal)
-            fourthCard.setImage(randomImg1[2], for: .normal)
-            fifthCard.setImage(randomImg1[3], for: .normal)
+            secondCard.setImage(randomImg2[0], for: .normal)
+            thirdCard.setImage(randomImg2[1], for: .normal)
             firstCard.isEnabled = false
             secondCard.isEnabled = false
             thirdCard.isEnabled = false
@@ -109,11 +109,9 @@ class ViewController: UIViewController {
                 correct += 1
                 correctButton.text = "Correct: \(correct)"
             } else {
-            firstCard.setImage(randomImg1[0], for: .normal)
+            firstCard.setImage(randomImg2[0], for: .normal)
             secondCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-            thirdCard.setImage(randomImg1[1], for: .normal)
-            fourthCard.setImage(randomImg1[2], for: .normal)
-            fifthCard.setImage(randomImg1[3], for: .normal)
+            thirdCard.setImage(randomImg2[1], for: .normal)
             displayLabel.text = "Wrong"
             firstCard.isEnabled = false
             secondCard.isEnabled = false
@@ -136,11 +134,9 @@ class ViewController: UIViewController {
                 correct += 1
                 correctButton.text = "Correct: \(correct)"
             } else {
-            firstCard.setImage(randomImg1[0], for: .normal)
-            secondCard.setImage(randomImg1[1], for: .normal)
+            firstCard.setImage(randomImg2[0], for: .normal)
+            secondCard.setImage(randomImg2[1], for: .normal)
             thirdCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-            fourthCard.setImage(randomImg1[2], for: .normal)
-            fifthCard.setImage(randomImg1[3], for: .normal)
             displayLabel.text = "Wrong"
             firstCard.isEnabled = false
             secondCard.isEnabled = false
@@ -162,11 +158,10 @@ class ViewController: UIViewController {
                 correct += 1
                 correctButton.text = "Correct: \(correct)"
             } else {
-                firstCard.setImage(randomImg1[0], for: .normal)
-                secondCard.setImage(randomImg1[1], for: .normal)
-                thirdCard.setImage(randomImg1[2], for: .normal)
+                firstCard.setImage(randomImg2[0], for: .normal)
+                secondCard.setImage(randomImg2[1], for: .normal)
+                thirdCard.setImage(randomImg2[2], for: .normal)
                 fourthCard.setImage(UIImage.init(named: "threeCard"), for: .normal)
-                fifthCard.setImage(randomImg1[3], for: .normal)
                 displayLabel.text = "Wrong"
                 firstCard.isEnabled = false
                 secondCard.isEnabled = false
@@ -180,10 +175,6 @@ class ViewController: UIViewController {
             if randomCard == 4 {
                 sender.setImage(UIImage.init(named: "kingCard"), for: .normal)
                 displayLabel.text = "Correct"
-//                firstCard.setImage(randomImg[0], for: .normal)
-//                secondCard.setImage(randomImg[1], for: .normal)
-//                thirdCard.setImage(randomImg[2], for: .normal)
-//                fourthCard.setImage(randomImg[3], for: .normal)
                 firstCard.isEnabled = false
                 secondCard.isEnabled = false
                 thirdCard.isEnabled = false
