@@ -63,15 +63,12 @@ class ViewController: UIViewController {
             cardTwo.setImage(UIImage.init(named: "threeCard" ), for: .normal)
         } else if b == 2 {
             cardThree.setImage(UIImage.init(named: "threeCard" ), for: .normal)
-        } else if a == 3 {
+        } else if b == 3 {
             cardFour.setImage(UIImage.init(named: "threeCard" ), for: .normal)
-        } else if a == 4 {
+        } else if b == 4 {
             cardFive.setImage(UIImage.init(named: "threeCard" ), for: .normal)
         }
     }
-    
-    
-    
     
   // Actions
     @IBAction func flipCards(_ sender: UIButton) {

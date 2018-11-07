@@ -113,14 +113,14 @@
                                 <rect key="frame" x="228" y="377" width="108" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="flipCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8iU-va-7n1"/>
+                                    <action selector="flipCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8M-3G-bQy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H4-tJ-Hf3">
                                 <rect key="frame" x="41" y="377" width="108" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="flipCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcy-qG-Rnl"/>
+                                    <action selector="flipCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NRS-sX-jgf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,8 +128,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cardFive" destination="vVY-T6-Z4J" id="5pw-L4-sBm"/>
-                        <outlet property="cardFour" destination="6H4-tJ-Hf3" id="H2M-yr-PKY"/>
+                        <outlet property="cardFive" destination="vVY-T6-Z4J" id="XXa-bf-z0C"/>
+                        <outlet property="cardFour" destination="6H4-tJ-Hf3" id="9Jo-4Z-6Fh"/>
                         <outlet property="cardOne" destination="qrl-Rs-ExJ" id="qKa-vH-GDm"/>
                         <outlet property="cardThree" destination="zKi-cf-rVc" id="iZM-PD-U0h"/>
                         <outlet property="cardTwo" destination="23r-4n-WKu" id="dK7-lU-woU"/>
