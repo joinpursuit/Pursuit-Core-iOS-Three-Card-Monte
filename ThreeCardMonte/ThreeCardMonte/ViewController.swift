@@ -8,9 +8,11 @@
 
 import UIKit
 
+// Default Array
 var randomArr = [0,1,2]
 var randomElement = randomArr.randomElement()
 
+// Score Counters
 var correct = 0
 var incorrect = 0
 
@@ -41,17 +43,8 @@ class ViewController: UIViewController {
     
     cardFour.isHidden = true
     cardFive.isHidden = true
-    cardFour.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-    cardFive.setImage(UIImage.init(named: "cardBackRed"), for: .normal)
-    
-    // Disable
-    cardOne.isEnabled = true
-    cardTwo.isEnabled = true
-    cardThree.isEnabled = true
-    cardFour.isEnabled = true
-    cardFive.isEnabled = true
-    
   }
+    
     func kingCardForCards (a:Int, b:Int) {
         if a == 0 {
             cardOne.setImage(UIImage.init(named: "kingCard" ), for: .normal)
@@ -82,7 +75,6 @@ class ViewController: UIViewController {
     
   // Actions
     @IBAction func flipCards(_ sender: UIButton) {
-        
         switch sender.tag {
         case 0:
             if sender.tag == randomElement {
@@ -155,11 +147,16 @@ class ViewController: UIViewController {
         cardOne.isEnabled = false
         cardTwo.isEnabled = false
         cardThree.isEnabled = false
+        cardFour.isEnabled = false
+        cardFive.isEnabled = false
         timesWonLabel.text = "Times Won: \(correct)"
         timesLostLabel.text = "Times Lost: \(incorrect)"
     }
     
     @IBAction func resetThreeGame(sender: UIButton) {
+        randomArr = [0,1,2]
+        randomElement = randomArr.randomElement()
+
         cardFour.isHidden = true
         cardFive.isHidden = true
         
@@ -216,17 +213,11 @@ class ViewController: UIViewController {
         cardFive.isEnabled = true
     }
     
-    
     @IBAction func resetScores(_ sender: Any) {
         correct = 0
         incorrect = 0
         timesWonLabel.text = "Times Won: \(correct)"
         timesLostLabel.text = "Times Lost: \(incorrect)"
-        
     }
-    
-    
-    
-    
 }
 
