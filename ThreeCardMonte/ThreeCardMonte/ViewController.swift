@@ -15,12 +15,17 @@ var guess = Int()
 
 class ViewController: UIViewController {
     
+    
+    // @IBOutlet weak var title: UILabel!
+    
+    
+    
+    
    
-   // @IBOutlet weak var title: UILabel!
-    
-    
-    @IBOutlet weak var currentOptions: UILabel!
-    
+    //outlets
+    @IBOutlet weak var card0: UIButton!
+    @IBOutlet weak var card1: UIButton!
+    @IBOutlet weak var card2: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +33,13 @@ class ViewController: UIViewController {
         
         
         // disable
-       // redButton.isEnabled = false
+        // redButton.isEnabled = false
         
         
         // Change Image of a UI Button
         
-      //  redButton.setImage(UIImage.init(named: "Lime-Transparent-Background"), for: .normal)
-    
+        //  redButton.setImage(UIImage.init(named: "Lime-Transparent-Background"), for: .normal)
+        
     }
     
     
@@ -45,25 +50,49 @@ class ViewController: UIViewController {
         case 0:
             guess = 0
             if sender.tag == wheresTheCard {
-                //set label to you win
+                card0.setImage(UIImage.init(named: "kingCard"), for: .normal)
+                card0.isEnabled = false
+                card1.isEnabled = false
+                card2.isEnabled = false
+                 //set label to you win
+                
+            } else {
+                card0.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                card0.isEnabled = false
+                card1.isEnabled = false
+                card2.isEnabled = false
             }
         case 1:
             guess = 1
-//            if sender.tag == wheresTheCard {
-//                //set label to you win
-//            }
+            if sender.tag == wheresTheCard {
+                card1.setImage(UIImage.init(named: "kingCard"), for: .normal)
+                card0.isEnabled = false
+                card1.isEnabled = false
+                card2.isEnabled = false
+            }else {
+                card1.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                card0.isEnabled = false
+                card1.isEnabled = false
+                card2.isEnabled = false
+            }
+            
         case 2:
             guess = 2
-//            if sender.tag == wheresTheCard {
-//                //set label to you win
-//            }
+            if sender.tag == wheresTheCard {
+                card2.setImage(UIImage.init(named: "kingCard"), for: .normal)
+                card0.isEnabled = false
+                card1.isEnabled = false
+                card2.isEnabled = false
+            }else {
+                card2.setImage(UIImage.init(named: "threeCard"), for: .normal)
+                card0.isEnabled = false
+                card1.isEnabled = false
+                card2.isEnabled = false
+            }
+            
         default :
             print("not in scope")
         }
-//        if wheresTheCard == guess {
-//            pickACard.guess.setImage(UIImage.init(named: "kingCard"), for: .normal)
-//        }
     }
-    
 }
 
