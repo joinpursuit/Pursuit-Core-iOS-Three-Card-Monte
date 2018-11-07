@@ -77,7 +77,7 @@ class ViewController: UIViewController {
             cardTres.setImage(UIImage.init(named: "threeCard"), for: .normal)
             cardUno.setImage(UIImage.init(named: "kingCard"), for: .normal)
             cardDos.isEnabled = false
-             displayLabel.text = "You trash"
+            displayLabel.text = "You trash"
         }
         
             default:
