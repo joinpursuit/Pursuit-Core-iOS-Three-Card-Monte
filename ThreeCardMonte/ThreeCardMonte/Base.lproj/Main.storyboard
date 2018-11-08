@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardBackRed"/>
                                 <connections>
-                                    <action selector="switchOnButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8JA-BI-3D3"/>
+                                    <action selector="switchOnButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="20C-3H-9yK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJm-nt-aI0">
@@ -41,7 +41,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardBackRed"/>
                                 <connections>
-                                    <action selector="switchOnButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hap-au-AzY"/>
+                                    <action selector="switchOnButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YhZ-jL-gbo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pnw-Mr-jXi">
@@ -49,7 +49,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="cardBackRed"/>
                                 <connections>
-                                    <action selector="switchOnButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Xy-hl-vYZ"/>
+                                    <action selector="switchOnButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcT-6a-hvK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyh-Vh-U4e">
@@ -92,61 +92,19 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jj-ie-0YG">
-                                <rect key="frame" x="20" y="638" width="135" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="SCORE :">
-                                        <attributes>
-                                            <font key="NSFont" size="18" name=".SFNSText"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUP-dt-GDR">
-                                <rect key="frame" x="162" y="194" width="91" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardBackRed"/>
-                                <connections>
-                                    <action selector="switchOnButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sbe-IC-ZUb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-Wj-8Me">
-                                <rect key="frame" x="162" y="523" width="91" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cardBackRed"/>
-                                <connections>
-                                    <action selector="switchOnButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xy5-1F-1VV"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.77887055839999997" green="0.32656271520000002" blue="0.53191783739999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cardFive" destination="Ike-Wj-8Me" id="p7s-ag-u7k"/>
-                        <outlet property="cardFour" destination="AUP-dt-GDR" id="Y4u-eE-Ap9"/>
                         <outlet property="cardOne" destination="Pnw-Mr-jXi" id="GCI-LE-8bg"/>
                         <outlet property="cardThree" destination="XcJ-QZ-8N2" id="lsZ-Pl-Axq"/>
                         <outlet property="cardTwo" destination="Chw-mz-2zz" id="Z3n-Xw-a1t"/>
-                        <outlet property="fiveCardGame" destination="Ike-Wj-8Me" id="OJO-lh-wSS"/>
                         <outlet property="winOrLoseLabel" destination="iyh-Vh-U4e" id="yB1-3E-tHl"/>
                         <outlet property="youLose" destination="vbf-kB-OL9" id="Skf-2R-sGI"/>
                         <outletCollection property="allButtons" destination="Pnw-Mr-jXi" collectionClass="NSMutableArray" id="0a7-QF-2sE"/>
                         <outletCollection property="allButtons" destination="Chw-mz-2zz" collectionClass="NSMutableArray" id="WtQ-ou-EMc"/>
                         <outletCollection property="allButtons" destination="XcJ-QZ-8N2" collectionClass="NSMutableArray" id="OH5-Rw-U5s"/>
-                        <outletCollection property="fourCardGame" destination="AUP-dt-GDR" collectionClass="NSMutableArray" id="Rr3-b5-Ffb"/>
-                        <outletCollection property="fourCardGame" destination="Pnw-Mr-jXi" collectionClass="NSMutableArray" id="Jkd-Sr-pcv"/>
-                        <outletCollection property="fourCardGame" destination="Chw-mz-2zz" collectionClass="NSMutableArray" id="ZdE-el-w7j"/>
-                        <outletCollection property="fourCardGame" destination="XcJ-QZ-8N2" collectionClass="NSMutableArray" id="Qvg-7e-rKQ"/>
-                        <outletCollection property="fiveCardGame" destination="Ike-Wj-8Me" collectionClass="NSMutableArray" id="WkT-ye-kt7"/>
-                        <outletCollection property="fiveCardGame" destination="Pnw-Mr-jXi" collectionClass="NSMutableArray" id="i03-Rg-bsn"/>
-                        <outletCollection property="fiveCardGame" destination="Chw-mz-2zz" collectionClass="NSMutableArray" id="6du-8C-vw4"/>
-                        <outletCollection property="fiveCardGame" destination="XcJ-QZ-8N2" collectionClass="NSMutableArray" id="2ow-pL-U5b"/>
-                        <outletCollection property="fiveCardGame" destination="AUP-dt-GDR" collectionClass="NSMutableArray" id="SpV-5w-7WW"/>
-                        <outletCollection property="fiveCardGame" destination="Ike-Wj-8Me" collectionClass="NSMutableArray" id="xcw-Kg-REz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

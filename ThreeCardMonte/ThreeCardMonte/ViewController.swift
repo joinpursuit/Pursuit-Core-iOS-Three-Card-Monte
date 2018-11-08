@@ -15,20 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardOne: UIButton!
     @IBOutlet weak var cardTwo: UIButton!
     @IBOutlet weak var cardThree: UIButton!
-    @IBOutlet weak var cardFive: UIButton!
     
-    @IBOutlet weak var cardFour: UIButton!
     @IBOutlet var allButtons: [UIButton]!
     var arrayOfChoices = [UIImage.init(named:"threeCard"),
                           UIImage.init(named: "kingCard"),
                           UIImage.init(named: "threeCard")]
     var newRandom = [UIImage?]()
     var willRepeatProgram = Bool()
-    
-    @IBOutlet var fourCardGame: [UIButton]!
-    
-
-    @IBOutlet var fiveCardGame: [UIButton]!
     
     
     
@@ -38,7 +31,6 @@ class ViewController: UIViewController {
         winOrLoseLabel.isHidden = true
         youLose.isHidden = true
         willRepeatProgram = false
-    
   }
 
     @IBAction func switchOnButtons(_ sender: UIButton) {
@@ -78,11 +70,7 @@ class ViewController: UIViewController {
             }else{print("you lost")}
             winOrLoseLabel.isHidden = true
             youLose.isHidden = false
-        case 3:
-            cardFour.isHidden = true
-            
-        case 4:
-            print("d")
+        
         default:
             print("c")
             
