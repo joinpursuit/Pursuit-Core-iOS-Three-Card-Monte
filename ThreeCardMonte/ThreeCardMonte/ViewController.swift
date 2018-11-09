@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    
     
     @IBOutlet weak var gameTitle: UILabel!
     @IBOutlet weak var message: UILabel!
@@ -23,12 +21,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var lossNum: UILabel!    
     @IBOutlet weak var newGame: UIButton!
     
+    private lazy var allCards: [UIButton] = {
+        return [card0, card1, card2, card3, card4]
+    }()
+    
     override func viewDidLoad() {
     super.viewDidLoad()
-        
         card3.isHidden = true
         card4.isHidden = true
-        
   }
 
     var winCount = 0
@@ -40,13 +40,12 @@ class ViewController: UIViewController {
     
     var arrayImage: [UIImage] = [UIImage(named: "threeCard")!, UIImage(named: "threeCard")!, UIImage(named: "kingCard")!].shuffled()
     
-    func disableAll5Cards() {
-        card0.isEnabled = false
-        card1.isEnabled = false
-        card2.isEnabled = false
-        card3.isEnabled = false
-        card4.isEnabled = false
+     func disableAll5Cards() {
+        for card in allCards {
+            card.isEnabled = false
+        }
     }
+
     
     func disableAll4Cards() {
         card0.isEnabled = false
@@ -62,12 +61,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cardFlip(_ sender: UIButton) {
+        var caseIndex = 0
         switch sender.tag {
         case 0:
+            caseIndex = 0
             if fiveCardMode {
-                sender.setImage(arrayImage[0], for: .normal)
+                sender.setImage(arrayImage[caseIndex], for: .normal)
                 disableAll5Cards()
-                if arrayImage[0] == UIImage(named: "kingCard") {
+                if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                     winCount += 1
                     message.text = "You win. Play Again?"
                 } else {
@@ -89,9 +90,9 @@ class ViewController: UIViewController {
             }
             
             if fourCardMode {
-                sender.setImage(arrayImage[0], for: .normal)
+                sender.setImage(arrayImage[caseIndex], for: .normal)
                 disableAll4Cards()
-                if arrayImage[0] == UIImage(named: "kingCard") {
+                if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                     winCount += 1
                     message.text = "You win. Play Again?"
                 } else {
@@ -110,9 +111,9 @@ class ViewController: UIViewController {
             }
             
             if threeCardMode {
-            sender.setImage(arrayImage[0], for: .normal)
+            sender.setImage(arrayImage[caseIndex], for: .normal)
             disableAll3Cards()
-            if arrayImage[0] == UIImage(named: "kingCard") {
+            if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                 winCount += 1
                 message.text = "You win. Play Again?"
             } else {
@@ -127,10 +128,11 @@ class ViewController: UIViewController {
             }
             }
         case 1:
+            caseIndex = 1
             if fiveCardMode {
-                sender.setImage(arrayImage[1], for: .normal)
+                sender.setImage(arrayImage[caseIndex], for: .normal)
                 disableAll5Cards()
-                if arrayImage[1] == UIImage(named: "kingCard") {
+                if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                     winCount += 1
                     message.text = "You win. Play Again?"
                 } else {
@@ -152,9 +154,9 @@ class ViewController: UIViewController {
             }
             
             if fourCardMode {
-                sender.setImage(arrayImage[1], for: .normal)
+                sender.setImage(arrayImage[caseIndex], for: .normal)
                 disableAll4Cards()
-                if arrayImage[1] == UIImage(named: "kingCard") {
+                if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                     winCount += 1
                     message.text = "You win. Play Again?"
                 } else {
@@ -173,9 +175,9 @@ class ViewController: UIViewController {
             }
             
             if threeCardMode {
-            sender.setImage(arrayImage[1], for: .normal)
+            sender.setImage(arrayImage[caseIndex], for: .normal)
             disableAll3Cards()
-            if arrayImage[1] == UIImage(named: "kingCard") {
+            if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                 winCount += 1
                 message.text = "You win. Play Again?"
             } else {
@@ -190,10 +192,11 @@ class ViewController: UIViewController {
             }
             }
         case 2:
+            caseIndex = 2
             if fiveCardMode {
-                sender.setImage(arrayImage[2], for: .normal)
+                sender.setImage(arrayImage[caseIndex], for: .normal)
                 disableAll5Cards()
-                if arrayImage[2] == UIImage(named: "kingCard") {
+                if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                     winCount += 1
                     message.text = "You win. Play Again?"
                 } else {
@@ -215,9 +218,9 @@ class ViewController: UIViewController {
             }
             
             if fourCardMode {
-                sender.setImage(arrayImage[2], for: .normal)
+                sender.setImage(arrayImage[caseIndex], for: .normal)
                 disableAll4Cards()
-                if arrayImage[2] == UIImage(named: "kingCard") {
+                if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                     winCount += 1
                     message.text = "You win. Play Again?"
                 } else {
@@ -236,9 +239,9 @@ class ViewController: UIViewController {
             }
             
             if threeCardMode {
-            sender.setImage(arrayImage[2], for: .normal)
+            sender.setImage(arrayImage[caseIndex], for: .normal)
             disableAll3Cards()
-            if arrayImage[2] == UIImage(named: "kingCard") {
+            if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                 winCount += 1
                 message.text = "You win. Play Again?"
             } else {
@@ -253,10 +256,11 @@ class ViewController: UIViewController {
             }
             }
         case 3:
+            caseIndex = 3
             if fiveCardMode {
-                sender.setImage(arrayImage[3], for: .normal)
+                sender.setImage(arrayImage[caseIndex], for: .normal)
                 disableAll5Cards()
-                if arrayImage[3] == UIImage(named: "kingCard") {
+                if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                     winCount += 1
                     message.text = "You win. Play Again?"
                 } else {
@@ -278,9 +282,9 @@ class ViewController: UIViewController {
             }
             
             if fourCardMode {
-                sender.setImage(arrayImage[3], for: .normal)
+                sender.setImage(arrayImage[caseIndex], for: .normal)
                 disableAll4Cards()
-                if arrayImage[3] == UIImage(named: "kingCard") {
+                if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                     winCount += 1
                     message.text = "You win. Play Again?"
                 } else {
@@ -299,10 +303,11 @@ class ViewController: UIViewController {
                 }
             
         case 4:
+            caseIndex = 4
             if fiveCardMode {
-                sender.setImage(arrayImage[4], for: .normal)
+                sender.setImage(arrayImage[caseIndex], for: .normal)
                 disableAll5Cards()
-                if arrayImage[4] == UIImage(named: "kingCard") {
+                if arrayImage[caseIndex] == UIImage(named: "kingCard") {
                     winCount += 1
                     message.text = "You win. Play Again?"
                 } else {
@@ -332,18 +337,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func newGame(_ sender: UIButton) {
-        card0.isEnabled = true
-        card1.isEnabled = true
-        card2.isEnabled = true
-        card3.isEnabled = true
-        card4.isEnabled = true
-
+        for card in allCards {
+            card.isEnabled = true
+        }
         
-        card0.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        card1.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        card2.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        card3.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        card4.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        for card in allCards {
+            card.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        }
         
         message.text = "Pick a card."
         arrayImage = arrayImage.shuffled()
@@ -402,17 +402,13 @@ class ViewController: UIViewController {
         card3.isHidden = false
         card4.isHidden = false
         
-        card0.isEnabled = true
-        card1.isEnabled = true
-        card2.isEnabled = true
-        card3.isEnabled = true
-        card4.isEnabled = true
+        for card in allCards {
+            card.isEnabled = true
+        }
         
-        card0.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        card1.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        card2.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        card3.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        card4.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        for card in allCards {
+            card.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        }
         
         message.text = "Pick a card."
     
@@ -421,8 +417,6 @@ class ViewController: UIViewController {
         threeCardMode = false
         fourCardMode = false
     }
-    
-    
 }
 
 
