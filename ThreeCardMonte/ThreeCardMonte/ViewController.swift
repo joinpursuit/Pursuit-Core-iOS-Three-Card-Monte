@@ -36,19 +36,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func firstCardSelected(_ sender: UIButton) {
-        print("First card selected")
         playerChoice = 0
         checkResult()
     }
     
     @IBAction func secondCardSelected(_ sender: UIButton) {
-        print("Second card selected")
         playerChoice = 1
         checkResult()
     }
     
     @IBAction func thirdCardSelected(_ sender: UIButton) {
-        print("Third card selected")
         playerChoice = 2
         checkResult()
     }
