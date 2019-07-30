@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69D6A71222F09039004DEFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D6A71122F09039004DEFBE /* AppDelegate.swift */; };
+		69D6A71422F09039004DEFBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D6A71322F09039004DEFBE /* ViewController.swift */; };
+		69D6A71722F09039004DEFBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D6A71522F09039004DEFBE /* Main.storyboard */; };
+		69D6A71922F09039004DEFBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D6A71822F09039004DEFBE /* Assets.xcassets */; };
+		69D6A71C22F09039004DEFBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D6A71A22F09039004DEFBE /* LaunchScreen.storyboard */; };
+		69D6A72722F09039004DEFBE /* ThreeCardMonteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D6A72622F09039004DEFBE /* ThreeCardMonteTests.swift */; };
+		69D6A73222F09039004DEFBE /* ThreeCardMonteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D6A73122F09039004DEFBE /* ThreeCardMonteUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69D6A72322F09039004DEFBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69D6A70622F09039004DEFBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69D6A70D22F09039004DEFBE;
+			remoteInfo = ThreeCardMonte;
+		};
+		69D6A72E22F09039004DEFBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69D6A70622F09039004DEFBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69D6A70D22F09039004DEFBE;
+			remoteInfo = ThreeCardMonte;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69D6A70E22F09039004DEFBE /* ThreeCardMonte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeCardMonte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D6A71122F09039004DEFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69D6A71322F09039004DEFBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69D6A71622F09039004DEFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69D6A71822F09039004DEFBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69D6A71B22F09039004DEFBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69D6A71D22F09039004DEFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69D6A72222F09039004DEFBE /* ThreeCardMonteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeCardMonteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D6A72622F09039004DEFBE /* ThreeCardMonteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardMonteTests.swift; sourceTree = "<group>"; };
+		69D6A72822F09039004DEFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69D6A72D22F09039004DEFBE /* ThreeCardMonteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeCardMonteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D6A73122F09039004DEFBE /* ThreeCardMonteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardMonteUITests.swift; sourceTree = "<group>"; };
+		69D6A73322F09039004DEFBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69D6A70B22F09039004DEFBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D6A71F22F09039004DEFBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D6A72A22F09039004DEFBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69D6A70522F09039004DEFBE = {
+			isa = PBXGroup;
+			children = (
+				69D6A71022F09039004DEFBE /* ThreeCardMonte */,
+				69D6A72522F09039004DEFBE /* ThreeCardMonteTests */,
+				69D6A73022F09039004DEFBE /* ThreeCardMonteUITests */,
+				69D6A70F22F09039004DEFBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69D6A70F22F09039004DEFBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69D6A70E22F09039004DEFBE /* ThreeCardMonte.app */,
+				69D6A72222F09039004DEFBE /* ThreeCardMonteTests.xctest */,
+				69D6A72D22F09039004DEFBE /* ThreeCardMonteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69D6A71022F09039004DEFBE /* ThreeCardMonte */ = {
+			isa = PBXGroup;
+			children = (
+				69D6A71122F09039004DEFBE /* AppDelegate.swift */,
+				69D6A71322F09039004DEFBE /* ViewController.swift */,
+				69D6A71522F09039004DEFBE /* Main.storyboard */,
+				69D6A71822F09039004DEFBE /* Assets.xcassets */,
+				69D6A71A22F09039004DEFBE /* LaunchScreen.storyboard */,
+				69D6A71D22F09039004DEFBE /* Info.plist */,
+			);
+			path = ThreeCardMonte;
+			sourceTree = "<group>";
+		};
+		69D6A72522F09039004DEFBE /* ThreeCardMonteTests */ = {
+			isa = PBXGroup;
+			children = (
+				69D6A72622F09039004DEFBE /* ThreeCardMonteTests.swift */,
+				69D6A72822F09039004DEFBE /* Info.plist */,
+			);
+			path = ThreeCardMonteTests;
+			sourceTree = "<group>";
+		};
+		69D6A73022F09039004DEFBE /* ThreeCardMonteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				69D6A73122F09039004DEFBE /* ThreeCardMonteUITests.swift */,
+				69D6A73322F09039004DEFBE /* Info.plist */,
+			);
+			path = ThreeCardMonteUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69D6A70D22F09039004DEFBE /* ThreeCardMonte */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69D6A73622F09039004DEFBE /* Build configuration list for PBXNativeTarget "ThreeCardMonte" */;
+			buildPhases = (
+				69D6A70A22F09039004DEFBE /* Sources */,
+				69D6A70B22F09039004DEFBE /* Frameworks */,
+				69D6A70C22F09039004DEFBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThreeCardMonte;
+			productName = ThreeCardMonte;
+			productReference = 69D6A70E22F09039004DEFBE /* ThreeCardMonte.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69D6A72122F09039004DEFBE /* ThreeCardMonteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69D6A73922F09039004DEFBE /* Build configuration list for PBXNativeTarget "ThreeCardMonteTests" */;
+			buildPhases = (
+				69D6A71E22F09039004DEFBE /* Sources */,
+				69D6A71F22F09039004DEFBE /* Frameworks */,
+				69D6A72022F09039004DEFBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69D6A72422F09039004DEFBE /* PBXTargetDependency */,
+			);
+			name = ThreeCardMonteTests;
+			productName = ThreeCardMonteTests;
+			productReference = 69D6A72222F09039004DEFBE /* ThreeCardMonteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		69D6A72C22F09039004DEFBE /* ThreeCardMonteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69D6A73C22F09039004DEFBE /* Build configuration list for PBXNativeTarget "ThreeCardMonteUITests" */;
+			buildPhases = (
+				69D6A72922F09039004DEFBE /* Sources */,
+				69D6A72A22F09039004DEFBE /* Frameworks */,
+				69D6A72B22F09039004DEFBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69D6A72F22F09039004DEFBE /* PBXTargetDependency */,
+			);
+			name = ThreeCardMonteUITests;
+			productName = ThreeCardMonteUITests;
+			productReference = 69D6A72D22F09039004DEFBE /* ThreeCardMonteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69D6A70622F09039004DEFBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Phoenix McKnight";
+				TargetAttributes = {
+					69D6A70D22F09039004DEFBE = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					69D6A72122F09039004DEFBE = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 69D6A70D22F09039004DEFBE;
+					};
+					69D6A72C22F09039004DEFBE = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 69D6A70D22F09039004DEFBE;
+					};
+				};
+			};
+			buildConfigurationList = 69D6A70922F09039004DEFBE /* Build configuration list for PBXProject "ThreeCardMonte" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69D6A70522F09039004DEFBE;
+			productRefGroup = 69D6A70F22F09039004DEFBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69D6A70D22F09039004DEFBE /* ThreeCardMonte */,
+				69D6A72122F09039004DEFBE /* ThreeCardMonteTests */,
+				69D6A72C22F09039004DEFBE /* ThreeCardMonteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69D6A70C22F09039004DEFBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D6A71C22F09039004DEFBE /* LaunchScreen.storyboard in Resources */,
+				69D6A71922F09039004DEFBE /* Assets.xcassets in Resources */,
+				69D6A71722F09039004DEFBE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D6A72022F09039004DEFBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D6A72B22F09039004DEFBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69D6A70A22F09039004DEFBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D6A71422F09039004DEFBE /* ViewController.swift in Sources */,
+				69D6A71222F09039004DEFBE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D6A71E22F09039004DEFBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D6A72722F09039004DEFBE /* ThreeCardMonteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D6A72922F09039004DEFBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D6A73222F09039004DEFBE /* ThreeCardMonteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69D6A72422F09039004DEFBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69D6A70D22F09039004DEFBE /* ThreeCardMonte */;
+			targetProxy = 69D6A72322F09039004DEFBE /* PBXContainerItemProxy */;
+		};
+		69D6A72F22F09039004DEFBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69D6A70D22F09039004DEFBE /* ThreeCardMonte */;
+			targetProxy = 69D6A72E22F09039004DEFBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69D6A71522F09039004DEFBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69D6A71622F09039004DEFBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		69D6A71A22F09039004DEFBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69D6A71B22F09039004DEFBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69D6A73422F09039004DEFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69D6A73522F09039004DEFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69D6A73722F09039004DEFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ThreeCardMonte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pursuit.ThreeCardMonte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69D6A73822F09039004DEFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ThreeCardMonte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pursuit.ThreeCardMonte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69D6A73A22F09039004DEFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ThreeCardMonteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pursuit.ThreeCardMonteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreeCardMonte.app/ThreeCardMonte";
+			};
+			name = Debug;
+		};
+		69D6A73B22F09039004DEFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ThreeCardMonteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pursuit.ThreeCardMonteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThreeCardMonte.app/ThreeCardMonte";
+			};
+			name = Release;
+		};
+		69D6A73D22F09039004DEFBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ThreeCardMonteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pursuit.ThreeCardMonteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThreeCardMonte;
+			};
+			name = Debug;
+		};
+		69D6A73E22F09039004DEFBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ThreeCardMonteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pursuit.ThreeCardMonteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ThreeCardMonte;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69D6A70922F09039004DEFBE /* Build configuration list for PBXProject "ThreeCardMonte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D6A73422F09039004DEFBE /* Debug */,
+				69D6A73522F09039004DEFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69D6A73622F09039004DEFBE /* Build configuration list for PBXNativeTarget "ThreeCardMonte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D6A73722F09039004DEFBE /* Debug */,
+				69D6A73822F09039004DEFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69D6A73922F09039004DEFBE /* Build configuration list for PBXNativeTarget "ThreeCardMonteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D6A73A22F09039004DEFBE /* Debug */,
+				69D6A73B22F09039004DEFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69D6A73C22F09039004DEFBE /* Build configuration list for PBXNativeTarget "ThreeCardMonteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D6A73D22F09039004DEFBE /* Debug */,
+				69D6A73E22F09039004DEFBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69D6A70622F09039004DEFBE /* Project object */;
+}
