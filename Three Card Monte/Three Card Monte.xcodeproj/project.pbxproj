@@ -97,7 +97,8 @@
 		6901759822EF82F7003338D5 /* Three Card Monte */ = {
 			isa = PBXGroup;
 			children = (
-				690175C722EF8315003338D5 /* New Group */,
+				6901759922EF82F7003338D5 /* AppDelegate.swift */,
+				6901759B22EF82F7003338D5 /* ViewController.swift */,
 				6901759D22EF82F7003338D5 /* Main.storyboard */,
 				690175A022EF82F8003338D5 /* Assets.xcassets */,
 				690175A222EF82F8003338D5 /* LaunchScreen.storyboard */,
@@ -122,15 +123,6 @@
 				690175BB22EF82F8003338D5 /* Info.plist */,
 			);
 			path = "Three Card MonteUITests";
-			sourceTree = "<group>";
-		};
-		690175C722EF8315003338D5 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				6901759B22EF82F7003338D5 /* ViewController.swift */,
-				6901759922EF82F7003338D5 /* AppDelegate.swift */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
