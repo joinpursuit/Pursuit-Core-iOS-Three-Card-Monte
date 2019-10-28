@@ -32,6 +32,9 @@
                                 <state key="normal" title="3" backgroundImage="cardBackRed">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="backCardAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2lI-K7-WsE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95z-OH-BPU">
                                 <rect key="frame" x="138" y="118" width="110" height="167"/>
@@ -84,12 +87,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="card1" destination="Vp6-Na-7Yv" id="BHV-WC-c4Q"/>
-                        <outlet property="card2" destination="95z-OH-BPU" id="HVA-9t-gqo"/>
-                        <outlet property="card3" destination="fgP-Gk-bpj" id="vww-ZG-RGF"/>
-                        <outlet property="card4" destination="6RT-0z-dXE" id="B8g-Ju-GTr"/>
-                        <outlet property="card5" destination="vie-ZG-sQR" id="ZHc-Kb-qNr"/>
                         <outlet property="userOptionsPlusOutput" destination="Ciw-qO-80J" id="ZHM-Hv-bls"/>
+                        <outletCollection property="cards" destination="fgP-Gk-bpj" collectionClass="NSMutableArray" id="gJ6-b6-P26"/>
+                        <outletCollection property="cards" destination="95z-OH-BPU" collectionClass="NSMutableArray" id="OTt-4o-0bq"/>
+                        <outletCollection property="cards" destination="Vp6-Na-7Yv" collectionClass="NSMutableArray" id="Bzk-Un-UhV"/>
+                        <outletCollection property="cards" destination="vie-ZG-sQR" collectionClass="NSMutableArray" id="xaS-qh-CO3"/>
+                        <outletCollection property="cards" destination="6RT-0z-dXE" collectionClass="NSMutableArray" id="v72-Gm-aZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
