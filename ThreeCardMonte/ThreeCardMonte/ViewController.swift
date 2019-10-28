@@ -29,8 +29,11 @@ class ViewController: UIViewController {
         let winningNum = Int.random(in: 0...2)
         if sender.tag == winningNum {
             displayLabel.text = "You won!"
+            sender.setBackgroundImage(UIImage(named: "kingCard"), for: .disabled)
         } else {
             displayLabel.text = "You lost!"
+            sender.setBackgroundImage(UIImage(named: "threeCard"), for: .disabled)
+            cards[winningNum].setBackgroundImage(UIImage(named: "kingCard"), for: .disabled)
         }
 //        switch sender.tag {
 //        case 0:
@@ -51,6 +54,7 @@ class ViewController: UIViewController {
         displayLabel.text = "Pick a card"
         for card in cards {
             card.isEnabled = true
+            card.setBackgroundImage(UIImage(named: "redCard"), for: .disabled)
         }
     }
     
