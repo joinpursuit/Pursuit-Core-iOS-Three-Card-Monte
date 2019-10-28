@@ -12,6 +12,8 @@
 		573B72F621914AF300601A4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573B72F421914AF300601A4F /* Main.storyboard */; };
 		573B72F821914AF500601A4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 573B72F721914AF500601A4F /* Assets.xcassets */; };
 		573B72FB21914AF500601A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573B72F921914AF500601A4F /* LaunchScreen.storyboard */; };
+		8844BC4C2367378700CCB3A3 /* ThreeCardMonte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844BC4B2367378700CCB3A3 /* ThreeCardMonte.swift */; };
+		8844BC4E2367380D00CCB3A3 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844BC4D2367380D00CCB3A3 /* Cards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		573B72F721914AF500601A4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		573B72FA21914AF500601A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		573B72FC21914AF500601A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8844BC4B2367378700CCB3A3 /* ThreeCardMonte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCardMonte.swift; sourceTree = "<group>"; };
+		8844BC4D2367380D00CCB3A3 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 				573B72F021914AF300601A4F /* AppDelegate.swift */,
 				573B72F221914AF300601A4F /* ViewController.swift */,
 				573B72F421914AF300601A4F /* Main.storyboard */,
+				8844BC4B2367378700CCB3A3 /* ThreeCardMonte.swift */,
 				573B72F721914AF500601A4F /* Assets.xcassets */,
+				8844BC4D2367380D00CCB3A3 /* Cards.swift */,
 				573B72F921914AF500601A4F /* LaunchScreen.storyboard */,
 				573B72FC21914AF500601A4F /* Info.plist */,
 			);
@@ -96,6 +102,7 @@
 				TargetAttributes = {
 					573B72EC21914AF300601A4F = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -137,6 +144,8 @@
 			files = (
 				573B72F321914AF300601A4F /* ViewController.swift in Sources */,
 				573B72F121914AF300601A4F /* AppDelegate.swift in Sources */,
+				8844BC4C2367378700CCB3A3 /* ThreeCardMonte.swift in Sources */,
+				8844BC4E2367380D00CCB3A3 /* Cards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +299,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.pursuit.ThreeCardMonte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -307,7 +316,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.pursuit.ThreeCardMonte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
