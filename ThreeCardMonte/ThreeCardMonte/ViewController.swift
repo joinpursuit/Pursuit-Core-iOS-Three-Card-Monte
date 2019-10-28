@@ -26,16 +26,22 @@ class ViewController: UIViewController {
     
     
     @IBAction func chooseCard(_ sender: UIButton) {
-        switch sender.tag {
-        case 0:
-            displayLabel.text = "You lost!"
-        case 1:
-            displayLabel.text = "You lost!"
-        case 2:
+        let winningNum = Int.random(in: 0...2)
+        if sender.tag == winningNum {
             displayLabel.text = "You won!"
-        default:
-            displayLabel.text = "What did you do?!"
+        } else {
+            displayLabel.text = "You lost!"
         }
+//        switch sender.tag {
+//        case 0:
+//            displayLabel.text = "You lost!"
+//        case 1:
+//            displayLabel.text = "You lost!"
+//        case 2:
+//            displayLabel.text = "You won!"
+//        default:
+//            displayLabel.text = "What did you do?!"
+//        }
         for card in cards {
             card.isEnabled = false
         }
