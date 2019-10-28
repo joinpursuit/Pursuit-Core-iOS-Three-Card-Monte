@@ -30,7 +30,7 @@ Your final app should look like the gif below.
 
 ### Stage 1: 
 
-Create three buttons. Allow for the winning card to be a random card then tell the user they won. If the user selects any other button, then display to the user they lose. 
+Create three buttons. Allow for the winning card to be randomized then tell the user they won. If the user selects any other button, then display to the user they lose. 
 
 After a user clicks on a button, disable all buttons until the new game button is pressed. Reset the text to an introductory message.
 
