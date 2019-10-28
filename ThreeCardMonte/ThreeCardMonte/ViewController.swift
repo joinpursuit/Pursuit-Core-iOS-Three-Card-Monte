@@ -12,13 +12,23 @@ class ViewController: UIViewController {
     var game = ThreeCardMonte()
     @IBAction func cardOne(_ sender: UIButton) {
         if game.cardsFlipped == false {
-            cardOne.setImage(UIImage(named: game.cards[0].rawValue), for: .normal)
             if game.cards[0].rawValue == "kingCard" {
+                cardOne.setImage(UIImage(named: "kingCard"), for: .normal)
                 gameStatus.text = "You Win"
             } else {
                 gameStatus.text = "You Lose, better luck next time"
-                middleCard.setImage(UIImage(named: game.cards[1].rawValue), for: .normal)
-                cardThree.setImage(UIImage(named: game.cards[2].rawValue), for: .normal)
+                cardOne.setImage(UIImage(named: "threeCard"), for: .normal)
+                for card in 1..<game.cards.count {
+                    if game.cards[card].rawValue == "kingCard" {
+                        if card == 1 {
+                            middleCard.setImage(UIImage(named: "kingCard"), for:  .normal)
+                            cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                        } else {
+                            cardThree.setImage(UIImage(named: "kingCard"), for: .normal)
+                            middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                        }
+                    }
+                }
             }
         }
         
@@ -31,13 +41,23 @@ class ViewController: UIViewController {
     
     @IBAction func middleCard(_ sender: UIButton) {
         if game.cardsFlipped == false {
-            middleCard.setImage(UIImage(named: game.cards[1].rawValue), for: .normal)
             if game.cards[1].rawValue == "kingCard" {
                 gameStatus.text = "You Win"
+                middleCard.setImage(UIImage(named: "kingCard"), for: .normal)
             } else {
                 gameStatus.text = "You Lose, better luck next time"
-                cardOne.setImage(UIImage(named: game.cards[0].rawValue), for: .normal)
-                cardThree.setImage(UIImage(named: game.cards[2].rawValue), for: .normal)
+                middleCard.setImage(UIImage(named: "threeCard"), for: .normal)
+                             for card in 0..<game.cards.count {
+                                 if game.cards[card].rawValue == "kingCard" {
+                                     if card == 0 {
+                                         cardOne.setImage(UIImage(named: "kingCard"), for:  .normal)
+                                         cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                                     } else {
+                                         cardThree.setImage(UIImage(named: "kingCard"), for: .normal)
+                                         cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                                     }
+                                 }
+                             }
             }
             
         }
@@ -47,13 +67,23 @@ class ViewController: UIViewController {
     
     @IBAction func cardThree(_ sender: UIButton) {
         if game.cardsFlipped == false {
-            cardThree.setImage(UIImage(named: game.cards[2].rawValue), for: .normal)
             if game.cards[2].rawValue == "kingCard" {
                 gameStatus.text = "You Win"
+                cardThree.setImage(UIImage(named: "kingCard"), for: .normal)
             } else {
                 gameStatus.text = "You Lose, better luck next time"
-                cardOne.setImage(UIImage(named: game.cards[0].rawValue), for: .normal)
-                middleCard.setImage(UIImage(named: game.cards[1].rawValue), for: .normal)
+                cardThree.setImage(UIImage(named: "threeCard"), for: .normal)
+                for card in 0..<game.cards.count {
+                    if game.cards[card].rawValue == "kingCard" {
+                        if card == 0 {
+                            cardOne.setImage(UIImage(named: "kingCard"), for:  .normal)
+                            middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                        } else {
+                            middleCard.setImage(UIImage(named: "kingCard"), for: .normal)
+                            cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                        }
+                    }
+                }
             }
         }
         
