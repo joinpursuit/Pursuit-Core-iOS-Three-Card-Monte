@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var game = ThreeCardMonte()
+    
     @IBAction func cardOne(_ sender: UIButton) {
         if game.cardsFlipped == false {
             if game.cards[0].rawValue == "kingCard" {
@@ -18,20 +19,16 @@ class ViewController: UIViewController {
             } else {
                 gameStatus.text = "You Lose, better luck next time"
                 cardOne.setImage(UIImage(named: "threeCard"), for: .normal)
-                for card in 1..<game.cards.count {
-                    if game.cards[card].rawValue == "kingCard" {
-                        if card == 1 {
-                            middleCard.setImage(UIImage(named: "kingCard"), for:  .normal)
-                            cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
-                        } else {
-                            cardThree.setImage(UIImage(named: "kingCard"), for: .normal)
-                            middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
-                        }
-                    }
+                
+                if game.cards[1].rawValue == "kingCard" {
+                    middleCard.setImage(UIImage(named: "kingCard"), for:  .normal)
+                    cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                } else {
+                    cardThree.setImage(UIImage(named: "kingCard"), for: .normal)
+                    middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
                 }
             }
         }
-        
         game.cardsFlipped = true
     }
     
@@ -47,21 +44,16 @@ class ViewController: UIViewController {
             } else {
                 gameStatus.text = "You Lose, better luck next time"
                 middleCard.setImage(UIImage(named: "threeCard"), for: .normal)
-                             for card in 0..<game.cards.count {
-                                 if game.cards[card].rawValue == "kingCard" {
-                                     if card == 0 {
-                                         cardOne.setImage(UIImage(named: "kingCard"), for:  .normal)
-                                         cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
-                                     } else {
-                                         cardThree.setImage(UIImage(named: "kingCard"), for: .normal)
-                                         cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
-                                     }
-                                 }
-                             }
+                
+                if game.cards[0].rawValue == "kingCard" {
+                    cardOne.setImage(UIImage(named: "kingCard"), for:  .normal)
+                    cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                } else {
+                    cardThree.setImage(UIImage(named: "kingCard"), for: .normal)
+                    cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                }
             }
-            
         }
-        
         game.cardsFlipped = true
     }
     
@@ -73,30 +65,23 @@ class ViewController: UIViewController {
             } else {
                 gameStatus.text = "You Lose, better luck next time"
                 cardThree.setImage(UIImage(named: "threeCard"), for: .normal)
-                for card in 0..<game.cards.count {
-                    if game.cards[card].rawValue == "kingCard" {
-                        if card == 0 {
-                            cardOne.setImage(UIImage(named: "kingCard"), for:  .normal)
-                            middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
-                        } else {
-                            middleCard.setImage(UIImage(named: "kingCard"), for: .normal)
-                            cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
-                        }
-                    }
+                
+                if game.cards[0].rawValue == "kingCard" {
+                    cardOne.setImage(UIImage(named: "kingCard"), for:  .normal)
+                    middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
+                } else {
+                    middleCard.setImage(UIImage(named: "kingCard"), for: .normal)
+                    cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
                 }
             }
         }
-        
         game.cardsFlipped = true
     }
     
     @IBOutlet weak var gameStatus: UILabel!
     
     @IBAction func newGame(_ sender: UIButton) {
-        gameStatus.text = ""
-        cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        setInitialImages()
         game.cardsFlipped = false
         game.cardShuffle()
     }
@@ -106,10 +91,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         roundedCorners()
-        cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
-        
+        setInitialImages()
     }
     
     func roundedCorners() {
@@ -125,8 +107,11 @@ class ViewController: UIViewController {
         newGame.layer.masksToBounds = true
     }
     
-    
-    
-    
+    func setInitialImages() {
+        cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        gameStatus.text = "Pick a Card"
+    }
 }
 

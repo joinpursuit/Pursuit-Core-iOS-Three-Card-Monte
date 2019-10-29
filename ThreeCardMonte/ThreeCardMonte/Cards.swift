@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum Cards:String, CaseIterable {
+enum Cards: String {
     case threeCard, kingCard, cardBackRed
 }
