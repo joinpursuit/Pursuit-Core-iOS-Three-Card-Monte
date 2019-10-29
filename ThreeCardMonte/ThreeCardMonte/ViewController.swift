@@ -22,55 +22,92 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
     
   }
 
     
     
+    @IBAction func newGame(_ reset: UIButton) {
+    
+        card1.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        card2.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        card3.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        
+        card1.isEnabled = true
+        card2.isEnabled = true
+        card3.isEnabled = true
+    }
+    
+    
+    
     @IBAction func cardGame(_ sender: UIButton) {
         
-    // let newCard: (card: UIImage?, state: String)
-// let cardButtonBackgroundImage( UIImage: named "cardBackRed", state: .normal!)
+  
         
    let images = ["threeCard", "kingCard", "threeCard"]
-//        let guess = Int.random(in: 0...2)
-//
-//        if guess == sender.tag {
-//            status.accessibilityIdentifier = .some("You win!🎉🎉🎉")
-//        } else {
-//            status.accessibilityIdentifier = .some("You lose!")
-//        }
-//        let cardChoice: (card: UIImage?, gameStatus: UIView?)
+
         switch sender .tag {
         case 0:
             if images.randomElement() == "kingCard" {
-                print("You win!!")
+                
+                status.text = "You win!!👏🏻"
                 sender.setImage(UIImage(named: "kingCard"), for: .normal)
                 
                 card1.isEnabled = false
-//                card2 card3 disable
+                card2.isEnabled = false
+                card3.isEnabled = false
+
             } else {
-                print("You lose")
-                //button image to threecard
-                //Disable card,1,2,3
+                images.randomElement() == "threeCard"
+                status.text = "You lose😔"
+                sender.setImage(UIImage(named: "threeCard"), for: .normal)
+                
+                card1.isEnabled = false
+                card2.isEnabled = false
+                card3.isEnabled = false
             }
-//            status.text = "You win!"
-            print("i pressed 0 button")
         case 1:
-            if images.randomElement() == "threeCard" {
-                print("You lose")
-            } else {
-                print("You win")
-            }
-            print("i pressed 1 button")
+          if images.randomElement() == "kingCard" {
+                       
+                    status.text = "You win!!👏🏻"
+                       sender.setImage(UIImage(named: "kingCard"), for: .normal)
+                       
+                       card1.isEnabled = false
+                       card2.isEnabled = false
+                       card3.isEnabled = false
+
+                   } else {
+                       images.randomElement() == "threeCard"
+                       
+                        status.text = "You lose😔"
+                       sender.setImage(UIImage(named: "threeCard"), for: .normal)
+                     
+                       card1.isEnabled = false
+                       card2.isEnabled = false
+                       card3.isEnabled = false
+                   }
+          
         case 2:
-            if images.randomElement() == "threeCard" {
-                         print("You lose")
-                     } else {
-                         print("You win")
-                     }
-          print("i pressed 2 button")
+         if images.randomElement() == "kingCard" {
+                      
+                    status.text = "You win!!👏🏻"
+                      sender.setImage(UIImage(named: "kingCard"), for: .normal)
+                      
+                      card1.isEnabled = false
+                      card2.isEnabled = false
+                      card3.isEnabled = false
+
+                  } else {
+                      images.randomElement() == "threeCard"
+                      
+                    status.text = "You lose😔"
+                      sender.setImage(UIImage(named: "threeCard"), for: .normal)
+                      //button image to threecard
+                      card1.isEnabled = false
+                      card2.isEnabled = false
+                      card3.isEnabled = false
+                  }
 
         default:
             print("no button i pressed is in switch")

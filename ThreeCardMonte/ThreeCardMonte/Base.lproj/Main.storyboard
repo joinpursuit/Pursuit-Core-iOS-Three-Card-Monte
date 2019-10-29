@@ -50,6 +50,9 @@
                                 <rect key="frame" x="172" y="500" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A8l-HE-MhT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a card!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQf-Z5-6k4">
                                 <rect key="frame" x="139" y="436" width="137" height="24"/>
@@ -67,12 +70,12 @@
                         <outlet property="card2" destination="COt-0E-lSc" id="jtO-9n-KSe"/>
                         <outlet property="card3" destination="oZM-44-AQ8" id="uPG-Q3-Evh"/>
                         <outlet property="newGame" destination="t1o-q9-4jp" id="dXJ-LK-jUO"/>
-                        <outlet property="status" destination="MQf-Z5-6k4" id="Plb-tw-5Qf"/>
+                        <outlet property="status" destination="MQf-Z5-6k4" id="5oG-PG-ky1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="773.91304347826087" y="215.625"/>
+            <point key="canvasLocation" x="72" y="-37"/>
         </scene>
     </scenes>
     <resources>
