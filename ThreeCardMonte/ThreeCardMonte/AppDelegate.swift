@@ -5,7 +5,6 @@
 //  Created by Alex Paul on 11/5/18.
 //  Copyright © 2018 Pursuit. All rights reserved.
 //
-
 import UIKit
 
 @UIApplicationMain
@@ -43,4 +42,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
