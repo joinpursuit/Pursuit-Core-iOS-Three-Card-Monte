@@ -20,13 +20,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var card1: UIButton!
     @IBOutlet weak var card2: UIButton!
     @IBOutlet weak var card3: UIButton!
-
-    @IBAction func userCardsToChoose(_ sender: UIButton) {
-        let winTag = Int.random(in: 0...2)
-        if sender.tag == winTag {
+    
+    
+    @IBAction func userCardsToChoose(_ pickedCard: UIButton) {
+        let deck = [card1!, card2!, card3!]
+        let winCard = deck.randomElement()!
+        if pickedCard == winCard {
             userFeedBack.text = "You win!"
+            pickedCard.setImage(UIImage(named: "kingCard"), for: .normal)
         } else {
             userFeedBack.text = "You lost!"
+            pickedCard.setImage(UIImage(named: "threeCard"), for: .normal)
+            winCard.setImage(UIImage(named: "kingCard"), for: .normal)
         }
         
         card1.isEnabled = false
@@ -34,10 +39,11 @@ class ViewController: UIViewController {
         card3.isEnabled = false
     }
     
-    
     @IBAction func newGame(_ sender: UIButton) {
         userFeedBack.text = "Pick a card, any card"
-        
+        card1.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        card2.setImage(UIImage(named: "cardBackRed"), for: .normal)
+        card3.setImage(UIImage(named: "cardBackRed"), for: .normal)
         card1.isEnabled = true
         card2.isEnabled = true
         card3.isEnabled = true
