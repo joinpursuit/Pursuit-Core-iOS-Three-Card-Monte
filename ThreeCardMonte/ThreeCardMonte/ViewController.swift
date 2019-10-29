@@ -22,10 +22,8 @@ final class ViewController: UIViewController {
                 
                 if game.cards[1].rawValue == "kingCard" {
                     middleCard.setImage(UIImage(named: "kingCard"), for:  .normal)
-                    cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
                 } else {
                     cardThree.setImage(UIImage(named: "kingCard"), for: .normal)
-                    middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
                 }
             }
         }
@@ -47,10 +45,8 @@ final class ViewController: UIViewController {
                 
                 if game.cards[0].rawValue == "kingCard" {
                     cardOne.setImage(UIImage(named: "kingCard"), for:  .normal)
-                    cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
                 } else {
                     cardThree.setImage(UIImage(named: "kingCard"), for: .normal)
-                    cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
                 }
             }
         }
@@ -68,10 +64,8 @@ final class ViewController: UIViewController {
                 
                 if game.cards[0].rawValue == "kingCard" {
                     cardOne.setImage(UIImage(named: "kingCard"), for:  .normal)
-                    middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
                 } else {
                     middleCard.setImage(UIImage(named: "kingCard"), for: .normal)
-                    cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
                 }
             }
         }
