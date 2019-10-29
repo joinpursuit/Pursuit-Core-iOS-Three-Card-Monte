@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    var game = ThreeCardMonte()
+final class ViewController: UIViewController {
+   private var game = ThreeCardMonte()
     
     @IBAction func cardOne(_ sender: UIButton) {
         if game.cardsFlipped == false {
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
         setInitialImages()
     }
     
-    func roundedCorners() {
+  private func roundedCorners() {
         cardOne.layer.cornerRadius = 5.0
         gameStatus.layer.cornerRadius = 5.0
         gameStatus.layer.masksToBounds = true
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         newGame.layer.masksToBounds = true
     }
     
-    func setInitialImages() {
+  private func setInitialImages() {
         cardOne.setImage(UIImage(named: "cardBackRed"), for: .normal)
         middleCard.setImage(UIImage(named: "cardBackRed"), for: .normal)
         cardThree.setImage(UIImage(named: "cardBackRed"), for: .normal)
