@@ -24,25 +24,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var card2: UIButton!
     @IBOutlet weak var card3: UIButton!
     @IBOutlet weak var newGame: UIButton!
-    
     @IBOutlet weak var cardSelectLabel: UILabel!
     
     let selected = UIControl.State.normal
     let cardImage = UIImage(named: threeCard )
     let cardImage2 = UIImage(named: kingCard)
-    let randomImage = UIImage(named: shuffled[0])
-    let randomImage2 = UIImage(named: shuffled[1])
+    var randomImage = UIImage(named: shuffled[0])
+    var randomImage2 = UIImage(named: shuffled[1])
     let defaultImage = UIImage(named: cardBackRed)
+    
+    func turnOff()  {
+        card1.isEnabled = false
+        card2.isEnabled = false
+        card3.isEnabled = false
+    }
+    
+    func turnOn()   {
+        card1.isEnabled = true
+        card2.isEnabled = true
+        card3.isEnabled = true
+    }
     
     func reset()    {
         typeCardArray = ["cardBackRed","threeCard","kingCard"]
         cardsArrayIfLost = ["cardBackRed","kingCard"]
-        card1.isEnabled = true
-        card2.isEnabled = true
-        card3.isEnabled = true
+        randomCard = typeCardArray.randomElement()
+        shuffled = cardsArrayIfLost.shuffled()
+        turnOn()
         card1.setBackgroundImage(defaultImage, for: selected)
         card2.setBackgroundImage(defaultImage, for: selected)
         card3.setBackgroundImage(defaultImage, for: selected)
+        randomImage = UIImage(named: shuffled[0])
+        randomImage2 = UIImage(named: shuffled[1])
+        cardSelectLabel.text = "Pick The Right Card"
     }
     
     override func viewDidLoad() {
@@ -51,9 +65,8 @@ class ViewController: UIViewController {
         }
 
     
-    
     @IBAction func pickCard(_ sender: UIButton) {
-    
+        
         switch  sender.tag {
             case 0:
                 if randomCard != kingCard   {
@@ -68,6 +81,7 @@ class ViewController: UIViewController {
                     cardSelectLabel.text = "You Win!"
                 sender.setBackgroundImage(cardImage2, for: selected)
                        }
+            turnOff()
         case 1:
             if randomCard != kingCard   {
                 
@@ -82,6 +96,7 @@ class ViewController: UIViewController {
                 cardSelectLabel.text = "You Win!"
                 sender.setBackgroundImage(cardImage2, for: selected)
                        }
+            turnOff()
         case 2:
             if randomCard != kingCard   {
                 cardSelectLabel.text = "You Lose!"
@@ -96,15 +111,12 @@ class ViewController: UIViewController {
                 cardSelectLabel.text = "You Win!"
                 sender.setBackgroundImage(cardImage2, for: selected)
                        }
+            turnOff()
         case 3:
-                       
-            print("look at me")
-        
+            reset()
+            
         default:
             print("look at me")
         }
-    card1.isEnabled = false
-    card2.isEnabled = false
-    card3.isEnabled = false
     }
 }
