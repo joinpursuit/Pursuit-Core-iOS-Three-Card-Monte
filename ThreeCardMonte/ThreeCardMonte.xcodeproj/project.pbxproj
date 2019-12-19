@@ -35,6 +35,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		087BC0F522EF82E2000A825A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				573B72F021914AF300601A4F /* AppDelegate.swift */,
+				573B72F921914AF500601A4F /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		573B72E421914AF300601A4F = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +63,10 @@
 		573B72EF21914AF300601A4F /* ThreeCardMonte */ = {
 			isa = PBXGroup;
 			children = (
-				573B72F021914AF300601A4F /* AppDelegate.swift */,
+				087BC0F522EF82E2000A825A /* Supporting Files */,
 				573B72F221914AF300601A4F /* ViewController.swift */,
 				573B72F421914AF300601A4F /* Main.storyboard */,
 				573B72F721914AF500601A4F /* Assets.xcassets */,
-				573B72F921914AF500601A4F /* LaunchScreen.storyboard */,
 				573B72FC21914AF500601A4F /* Info.plist */,
 			);
 			path = ThreeCardMonte;
